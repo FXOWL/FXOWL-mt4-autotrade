@@ -1,0 +1,14 @@
+{
+    // "C_Cpp.clang_format_fallbackStyle": "Visual Studio",
+    // Visual Studio,LLVM,Google,ChromiumMozilla,WebKit,Microsoft,GNU,none
+    "C_Cpp.clang_format_style": "file",
+    // "C_Cpp.clang_format_fallbackStyle": "Google",
+    // "C_Cpp.clang_format_style": "Google",
+    "editor.formatOnSave": true,
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "*.mq4": "cpp",
+        "*.mqh": "cpp",
+        "*.mql4": "cpp"
+    },
+}

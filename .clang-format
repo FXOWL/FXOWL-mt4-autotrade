@@ -1,0 +1,28 @@
+---
+## https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: Google
+IndentWidth: 4
+#  falseだと関数宣言や関数定義のパラメータを1行にまとめるか、すべて1行ずつ表示となります。
+# BinPackParameters: false
+
+BreakBeforeInheritanceComma: true
+BreakBeforeTernaryOperators: true # 三項演算子の前で改行するか
+AlignAfterOpenBracket: BlockIndent # ブラケットの整列をどうするか
+
+# { } の位置をカスタム設定する
+BreakBeforeBraces: Custom
+# { } の位置
+BraceWrapping:
+  AfterControlStatement: false # 制御文の後
+  AfterEnum: true # enumの後 (単一行にしないため)
+  AfterFunction: true # 関数の後
+  AfterStruct: true # structの後 (単一行にしないため)
+  AfterUnion: true # unionの後 (単一行にしないため)
+  AfterExternBlock: false # externの後
+  BeforeCatch: false # catchの前
+  BeforeElse: true # elseの前
+ColumnLimit: 140 #行の最大文字数。超えた場合は改行する
+
+SpacesBeforeTrailingComments: 1 # コード後のコメントのスペース数
+AlignTrailingComments: false # コード後のコメントが複数行続く場合のアラインを整列するか
