@@ -1,0 +1,497 @@
+0	00:02:21.270	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	00:02:21.273	RSI USDJPY,M1: uninit reason 3
+0	00:02:21.273	ZigZag_DowT USDJPY,M5: initialized
+0	00:02:21.274	RSI USDJPY,M5: initialized
+0	00:15:35.380	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	00:15:35.381	RSI USDJPY,M5: uninit reason 3
+0	00:15:35.381	ZigZag_DowT USDJPY,M1: initialized
+0	00:15:35.382	RSI USDJPY,M1: initialized
+0	00:17:02.072	ZigZag_DowT USDJPY,M1: Alert: Short Entry Chance!
+0	00:18:01.734	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	00:18:01.736	RSI USDJPY,M1: uninit reason 3
+0	00:18:01.737	ZigZag_DowT USDJPY,M5: initialized
+0	00:18:01.737	RSI USDJPY,M5: initialized
+0	00:18:22.254	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	00:18:22.255	RSI USDJPY,M5: uninit reason 3
+0	00:18:22.255	ZigZag_DowT USDJPY,M1: initialized
+0	00:18:22.256	RSI USDJPY,M1: initialized
+0	00:18:27.194	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	00:18:27.196	RSI USDJPY,M1: uninit reason 3
+0	00:18:27.197	ZigZag_DowT USDJPY,M5: initialized
+0	00:18:27.197	RSI USDJPY,M5: initialized
+0	00:18:40.195	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	00:18:40.196	RSI USDJPY,M5: uninit reason 3
+0	00:18:40.196	ZigZag_DowT USDJPY,M15: initialized
+0	00:18:40.196	RSI USDJPY,M15: initialized
+0	00:18:44.616	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	00:18:44.616	RSI USDJPY,M15: uninit reason 3
+0	00:18:44.617	ZigZag_DowT USDJPY,H1: initialized
+0	00:18:44.617	RSI USDJPY,H1: initialized
+0	00:18:47.986	ZigZag_DowT USDJPY,H1: uninit reason 3
+0	00:18:47.986	RSI USDJPY,H1: uninit reason 3
+0	00:18:47.986	ZigZag_DowT USDJPY,M1: initialized
+0	00:18:47.987	RSI USDJPY,M1: initialized
+0	00:19:56.137	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	00:19:56.140	RSI USDJPY,M1: uninit reason 3
+0	00:19:56.140	ZigZag_DowT USDJPY,M5: initialized
+0	00:19:56.140	RSI USDJPY,M5: initialized
+0	00:20:45.588	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	00:20:45.589	RSI USDJPY,M5: uninit reason 3
+0	00:20:45.589	ZigZag_DowT USDJPY,M1: initialized
+0	00:20:45.590	RSI USDJPY,M1: initialized
+0	00:23:39.863	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	00:23:39.865	RSI USDJPY,M1: uninit reason 3
+0	00:23:39.865	ZigZag_DowT USDJPY,M5: initialized
+0	00:23:39.866	RSI USDJPY,M5: initialized
+0	00:23:42.573	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	00:23:42.574	RSI USDJPY,M5: uninit reason 3
+0	00:23:42.574	ZigZag_DowT USDJPY,M1: initialized
+0	00:23:42.575	RSI USDJPY,M1: initialized
+0	00:28:09.780	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	00:28:09.782	RSI USDJPY,M1: uninit reason 3
+0	00:28:09.782	ZigZag_DowT USDJPY,M5: initialized
+0	00:28:09.783	RSI USDJPY,M5: initialized
+0	00:29:05.372	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	00:29:05.373	RSI USDJPY,M5: uninit reason 3
+0	00:29:05.373	ZigZag_DowT USDJPY,M1: initialized
+0	00:29:05.374	RSI USDJPY,M1: initialized
+0	00:35:36.513	ZigZag_S-TYPE GBPJPY,M30: uninit reason 3
+0	00:35:36.519	ZigZag_S-TYPE GBPJPY,M1: initialized
+0	00:37:16.064	ZigZag_S-TYPE GBPJPY,M1: uninit reason 3
+0	00:37:16.077	ZigZag_S-TYPE GBPJPY,M5: initialized
+0	00:37:27.042	ZigZag_S-TYPE GBPJPY,M5: uninit reason 3
+0	00:37:27.055	ZigZag_S-TYPE GBPJPY,M15: initialized
+0	00:40:14.230	ZigZag_S-TYPE GBPJPY,M15: uninit reason 3
+0	00:40:14.236	ZigZag_S-TYPE GBPJPY,M5: initialized
+0	00:40:20.700	ZigZag_S-TYPE GBPJPY,M5: uninit reason 3
+0	00:40:20.707	ZigZag_S-TYPE GBPJPY,M1: initialized
+0	00:44:05.565	ZigZag_DowT EURUSD,Weekly: uninit reason 3
+0	00:44:05.565	ZigZag_S-TYPE EURUSD,Weekly: uninit reason 3
+0	00:44:05.565	RSI EURUSD,Weekly: uninit reason 3
+0	00:44:05.571	ZigZag_DowT EURUSD,M5: initialized
+0	00:44:05.571	ZigZag_S-TYPE EURUSD,M5: initialized
+0	00:44:05.571	RSI EURUSD,M5: initialized
+0	00:46:41.269	ZigZag_DowT USDJPY,Weekly: uninit reason 3
+0	00:46:41.269	ZigZag_DowT AUDUSD,Weekly: initialized
+0	01:14:25.414	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	01:14:25.416	RSI USDJPY,M1: uninit reason 3
+0	01:14:25.416	ZigZag_DowT USDJPY,H1: initialized
+0	01:14:25.417	RSI USDJPY,H1: initialized
+0	01:14:30.314	ZigZag_DowT USDJPY,H1: uninit reason 3
+0	01:14:30.314	RSI USDJPY,H1: uninit reason 3
+0	01:14:30.315	ZigZag_DowT USDJPY,M1: initialized
+0	01:14:30.315	RSI USDJPY,M1: initialized
+0	01:14:32.303	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	01:14:32.306	RSI USDJPY,M1: uninit reason 3
+0	01:14:32.306	ZigZag_DowT USDJPY,M30: initialized
+0	01:14:32.306	RSI USDJPY,M30: initialized
+0	01:15:13.245	ZigZag_DowT EURUSD,M5: uninit reason 3
+0	01:15:13.245	ZigZag_S-TYPE EURUSD,M5: uninit reason 3
+0	01:15:13.246	RSI EURUSD,M5: uninit reason 3
+0	01:15:13.252	ZigZag_DowT EURUSD,M1: initialized
+0	01:15:13.252	ZigZag_S-TYPE EURUSD,M1: initialized
+0	01:15:13.252	RSI EURUSD,M1: initialized
+0	01:15:19.065	ZigZag_DowT EURUSD,M1: uninit reason 3
+0	01:15:19.067	ZigZag_S-TYPE EURUSD,M1: uninit reason 3
+0	01:15:19.071	RSI EURUSD,M1: uninit reason 3
+0	01:15:19.071	ZigZag_DowT EURUSD,M5: initialized
+0	01:15:19.071	ZigZag_S-TYPE EURUSD,M5: initialized
+0	01:15:19.072	RSI EURUSD,M5: initialized
+0	01:15:29.506	ZigZag_DowT EURUSD,M5: uninit reason 3
+0	01:15:29.506	ZigZag_S-TYPE EURUSD,M5: uninit reason 3
+0	01:15:29.506	RSI EURUSD,M5: uninit reason 3
+0	01:15:29.507	ZigZag_DowT EURUSD,M1: initialized
+0	01:15:29.507	ZigZag_S-TYPE EURUSD,M1: initialized
+0	01:15:29.507	RSI EURUSD,M1: initialized
+0	01:16:22.566	ZigZag_DowT EURUSD,M1: uninit reason 3
+0	01:16:22.568	ZigZag_S-TYPE EURUSD,M1: uninit reason 3
+0	01:16:22.571	RSI EURUSD,M1: uninit reason 3
+0	01:16:22.572	ZigZag_DowT EURUSD,M5: initialized
+0	01:16:22.572	ZigZag_S-TYPE EURUSD,M5: initialized
+0	01:16:22.572	RSI EURUSD,M5: initialized
+0	01:16:26.997	ZigZag_DowT EURUSD,M5: uninit reason 3
+0	01:16:26.998	ZigZag_S-TYPE EURUSD,M5: uninit reason 3
+0	01:16:26.998	RSI EURUSD,M5: uninit reason 3
+0	01:16:27.005	ZigZag_DowT EURUSD,M15: initialized
+0	01:16:27.005	ZigZag_S-TYPE EURUSD,M15: initialized
+0	01:16:27.005	RSI EURUSD,M15: initialized
+0	01:16:38.367	ZigZag_DowT EURUSD,M15: uninit reason 3
+0	01:16:38.368	ZigZag_S-TYPE EURUSD,M15: uninit reason 3
+0	01:16:38.368	RSI EURUSD,M15: uninit reason 3
+0	01:16:38.373	ZigZag_DowT EURUSD,M30: initialized
+0	01:16:38.373	ZigZag_S-TYPE EURUSD,M30: initialized
+0	01:16:38.373	RSI EURUSD,M30: initialized
+0	01:16:44.248	ZigZag_DowT EURUSD,M30: uninit reason 3
+0	01:16:44.248	ZigZag_S-TYPE EURUSD,M30: uninit reason 3
+0	01:16:44.248	RSI EURUSD,M30: uninit reason 3
+0	01:16:44.248	ZigZag_DowT EURUSD,M15: initialized
+0	01:16:44.249	ZigZag_S-TYPE EURUSD,M15: initialized
+0	01:16:44.249	RSI EURUSD,M15: initialized
+0	01:16:58.768	ZigZag_DowT EURUSD,M15: uninit reason 3
+0	01:16:58.768	ZigZag_S-TYPE EURUSD,M15: uninit reason 3
+0	01:16:58.768	RSI EURUSD,M15: uninit reason 3
+0	01:16:58.769	ZigZag_DowT EURUSD,M5: initialized
+0	01:16:58.769	ZigZag_S-TYPE EURUSD,M5: initialized
+0	01:16:58.769	RSI EURUSD,M5: initialized
+0	01:18:28.740	ZigZag_DowT EURUSD,M5: uninit reason 3
+0	01:18:28.740	ZigZag_S-TYPE EURUSD,M5: uninit reason 3
+0	01:18:28.741	RSI EURUSD,M5: uninit reason 3
+0	01:18:28.742	ZigZag_DowT EURUSD,M1: initialized
+0	01:18:28.742	ZigZag_S-TYPE EURUSD,M1: initialized
+0	01:18:28.742	RSI EURUSD,M1: initialized
+0	01:18:35.650	ZigZag_DowT EURUSD,M1: uninit reason 3
+0	01:18:35.653	ZigZag_S-TYPE EURUSD,M1: uninit reason 3
+0	01:18:35.656	RSI EURUSD,M1: uninit reason 3
+0	01:18:35.657	ZigZag_DowT EURUSD,M5: initialized
+0	01:18:35.657	ZigZag_S-TYPE EURUSD,M5: initialized
+0	01:18:35.657	RSI EURUSD,M5: initialized
+0	01:18:43.121	ZigZag_DowT EURUSD,M5: uninit reason 3
+0	01:18:43.121	ZigZag_S-TYPE EURUSD,M5: uninit reason 3
+0	01:18:43.121	RSI EURUSD,M5: uninit reason 3
+0	01:18:43.122	ZigZag_DowT EURUSD,M1: initialized
+0	01:18:43.122	ZigZag_S-TYPE EURUSD,M1: initialized
+0	01:18:43.122	RSI EURUSD,M1: initialized
+0	01:20:44.963	ZigZag_S-TYPE GBPJPY,M1: uninit reason 3
+0	01:20:44.971	ZigZag_S-TYPE GBPJPY,M5: initialized
+0	01:31:35.841	ZigZag_S-TYPE GBPJPY,M5: uninit reason 3
+0	01:31:35.848	ZigZag_S-TYPE GBPJPY,M1: initialized
+0	01:31:45.711	ZigZag_S-TYPE GBPJPY,M1: uninit reason 3
+0	01:31:45.720	ZigZag_S-TYPE GBPJPY,M15: initialized
+0	01:31:51.381	ZigZag_S-TYPE GBPJPY,M15: uninit reason 3
+0	01:31:51.393	ZigZag_S-TYPE GBPJPY,H1: initialized
+0	01:32:23.142	ZigZag_S-TYPE GBPJPY,H1: uninit reason 3
+0	01:32:23.149	ZigZag_S-TYPE GBPJPY,M30: initialized
+0	01:32:30.763	ZigZag_S-TYPE GBPJPY,M30: uninit reason 3
+0	01:32:30.769	ZigZag_S-TYPE GBPJPY,H1: initialized
+0	01:32:44.052	ZigZag_S-TYPE GBPJPY,H1: uninit reason 3
+0	01:32:44.058	ZigZag_S-TYPE GBPJPY,M30: initialized
+0	01:32:51.452	ZigZag_S-TYPE GBPJPY,M30: uninit reason 3
+0	01:32:51.460	ZigZag_S-TYPE GBPJPY,M15: initialized
+0	01:32:59.009	ZigZag_S-TYPE GBPJPY,M15: uninit reason 3
+0	01:32:59.015	ZigZag_S-TYPE GBPJPY,M5: initialized
+0	01:33:03.095	ZigZag_S-TYPE GBPJPY,M5: uninit reason 3
+0	01:33:03.102	ZigZag_S-TYPE GBPJPY,M1: initialized
+0	01:33:06.653	ZigZag_S-TYPE GBPJPY,M1: uninit reason 3
+0	01:33:06.661	ZigZag_S-TYPE GBPJPY,M5: initialized
+0	01:33:10.503	ZigZag_S-TYPE GBPJPY,M5: uninit reason 3
+0	01:33:10.511	ZigZag_S-TYPE GBPJPY,M15: initialized
+0	01:33:12.373	ZigZag_S-TYPE GBPJPY,M15: uninit reason 3
+0	01:33:12.379	ZigZag_S-TYPE GBPJPY,M5: initialized
+0	01:33:13.053	ZigZag_S-TYPE GBPJPY,M5: uninit reason 3
+0	01:33:13.060	ZigZag_S-TYPE GBPJPY,M1: initialized
+0	01:33:29.134	ZigZag_DowT AUDUSD,Weekly: uninit reason 3
+0	01:33:29.166	ZigZag_DowT AUDUSD,H1: initialized
+0	08:39:28.052	Custom indicator TestCloseLine GBPUSD,H1: loaded successfully
+0	08:39:37.149	TestCloseLine GBPUSD,H1: initialized
+0	08:40:13.524	TestCloseLine GBPUSD,H1: uninit reason 3
+0	08:40:13.529	TestCloseLine GBPUSD,M30: initialized
+0	08:40:25.876	TestCloseLine GBPUSD,M30: uninit reason 3
+0	08:40:25.882	TestCloseLine GBPUSD,H4: initialized
+0	08:40:27.634	TestCloseLine GBPUSD,H4: uninit reason 3
+0	08:40:27.642	TestCloseLine GBPUSD,Daily: initialized
+0	08:40:29.004	TestCloseLine GBPUSD,Daily: uninit reason 3
+0	08:40:29.009	TestCloseLine GBPUSD,Weekly: initialized
+0	08:40:31.094	TestCloseLine GBPUSD,Weekly: uninit reason 3
+0	08:40:31.094	TestCloseLine GBPUSD,M30: initialized
+0	08:42:02.927	TestCloseLine GBPUSD,M30: uninit reason 3
+0	08:42:02.958	TestCloseLine GBPUSD,M1: initialized
+0	08:42:22.177	ZigZag_DowT USDJPY,M30: uninit reason 3
+0	08:42:22.178	RSI USDJPY,M30: uninit reason 3
+0	08:42:22.178	ZigZag_DowT USDJPY,H1: initialized
+0	08:42:22.180	RSI USDJPY,H1: initialized
+0	08:42:50.758	ZigZag_DowT USDJPY,H1: uninit reason 3
+0	08:42:50.758	RSI USDJPY,H1: uninit reason 3
+0	08:42:50.760	ZigZag_DowT USDJPY,H4: initialized
+0	08:42:50.760	RSI USDJPY,H4: initialized
+0	08:43:49.040	ZigZag_DowT USDJPY,H4: uninit reason 3
+0	08:43:49.040	RSI USDJPY,H4: uninit reason 3
+0	08:43:49.040	ZigZag_DowT USDJPY,M5: initialized
+0	08:43:49.041	RSI USDJPY,M5: initialized
+0	08:43:49.053	ZigZag_DowT USDJPY,M5: Alert: Short Entry Chance!
+0	08:43:55.510	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	08:43:55.511	RSI USDJPY,M5: uninit reason 3
+0	08:43:55.515	ZigZag_DowT USDJPY,M1: initialized
+0	08:43:55.515	RSI USDJPY,M1: initialized
+0	08:44:33.931	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	08:44:33.933	RSI USDJPY,M1: uninit reason 3
+0	08:44:33.933	ZigZag_DowT USDJPY,M5: initialized
+0	08:44:33.933	RSI USDJPY,M5: initialized
+0	08:44:33.943	ZigZag_DowT USDJPY,M5: Alert: Short Entry Chance!
+1	09:05:56.526	ZigZag_S-TYPE GBPJPY,M1: array out of range in 'S-TYPE_ZigZag.mq4' (204,37)
+1	09:05:56.526	TestCloseLine GBPUSD,M1: array out of range in 'TestCloseLine.mq4' (61,25)
+0	09:06:15.116	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:06:15.116	RSI USDJPY,M5: uninit reason 3
+0	09:06:15.116	ZigZag_DowT USDJPY,M1: initialized
+0	09:06:15.117	RSI USDJPY,M1: initialized
+0	09:06:37.086	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	09:06:37.087	RSI USDJPY,M1: uninit reason 3
+0	09:06:37.087	ZigZag_DowT USDJPY,M5: initialized
+0	09:06:37.088	RSI USDJPY,M5: initialized
+0	09:06:42.406	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:06:42.406	RSI USDJPY,M5: uninit reason 3
+0	09:06:42.407	ZigZag_DowT USDJPY,M15: initialized
+0	09:06:42.407	RSI USDJPY,M15: initialized
+0	09:06:49.587	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	09:06:49.587	RSI USDJPY,M15: uninit reason 3
+0	09:06:49.587	ZigZag_DowT USDJPY,M30: initialized
+0	09:06:49.588	RSI USDJPY,M30: initialized
+0	09:06:55.313	ZigZag_DowT USDJPY,M30: uninit reason 3
+0	09:06:55.313	RSI USDJPY,M30: uninit reason 3
+0	09:06:55.313	ZigZag_DowT USDJPY,M15: initialized
+0	09:06:55.314	RSI USDJPY,M15: initialized
+0	09:06:56.218	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	09:06:56.218	RSI USDJPY,M15: uninit reason 3
+0	09:06:56.218	ZigZag_DowT USDJPY,M5: initialized
+0	09:06:56.218	RSI USDJPY,M5: initialized
+0	09:07:08.358	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:07:08.358	RSI USDJPY,M5: uninit reason 3
+0	09:07:08.358	ZigZag_DowT USDJPY,H1: initialized
+0	09:07:08.358	RSI USDJPY,H1: initialized
+0	09:07:19.209	ZigZag_DowT USDJPY,H1: uninit reason 3
+0	09:07:19.209	RSI USDJPY,H1: uninit reason 3
+0	09:07:19.209	ZigZag_DowT USDJPY,M30: initialized
+0	09:07:19.209	RSI USDJPY,M30: initialized
+0	09:07:30.058	ZigZag_DowT USDJPY,M30: uninit reason 3
+0	09:07:30.058	RSI USDJPY,M30: uninit reason 3
+0	09:07:30.058	ZigZag_DowT USDJPY,M15: initialized
+0	09:07:30.059	RSI USDJPY,M15: initialized
+0	09:07:37.608	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	09:07:37.608	RSI USDJPY,M15: uninit reason 3
+0	09:07:37.608	ZigZag_DowT USDJPY,M5: initialized
+0	09:07:37.609	RSI USDJPY,M5: initialized
+0	09:07:42.799	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:07:42.799	RSI USDJPY,M5: uninit reason 3
+0	09:07:42.799	ZigZag_DowT USDJPY,M15: initialized
+0	09:07:42.799	RSI USDJPY,M15: initialized
+0	09:07:44.539	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	09:07:44.539	RSI USDJPY,M15: uninit reason 3
+0	09:07:44.539	ZigZag_DowT USDJPY,M5: initialized
+0	09:07:44.540	RSI USDJPY,M5: initialized
+0	09:07:48.109	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:07:48.109	RSI USDJPY,M5: uninit reason 3
+0	09:07:48.109	ZigZag_DowT USDJPY,H4: initialized
+0	09:07:48.110	RSI USDJPY,H4: initialized
+0	09:07:55.059	ZigZag_DowT USDJPY,H4: uninit reason 3
+0	09:07:55.060	RSI USDJPY,H4: uninit reason 3
+0	09:07:55.060	ZigZag_DowT USDJPY,H1: initialized
+0	09:07:55.060	RSI USDJPY,H1: initialized
+0	09:07:58.509	ZigZag_DowT USDJPY,H1: uninit reason 3
+0	09:07:58.509	RSI USDJPY,H1: uninit reason 3
+0	09:07:58.509	ZigZag_DowT USDJPY,M1: initialized
+0	09:07:58.510	RSI USDJPY,M1: initialized
+0	09:08:10.169	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	09:08:10.170	RSI USDJPY,M1: uninit reason 3
+0	09:08:10.170	ZigZag_DowT USDJPY,M5: initialized
+0	09:08:10.171	RSI USDJPY,M5: initialized
+0	09:08:21.990	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:08:21.990	RSI USDJPY,M5: uninit reason 3
+0	09:08:21.990	ZigZag_DowT USDJPY,M30: initialized
+0	09:08:21.990	RSI USDJPY,M30: initialized
+0	09:08:25.800	ZigZag_DowT USDJPY,M30: uninit reason 3
+0	09:08:25.800	RSI USDJPY,M30: uninit reason 3
+0	09:08:25.800	ZigZag_DowT USDJPY,H1: initialized
+0	09:08:25.800	RSI USDJPY,H1: initialized
+0	09:08:31.889	ZigZag_DowT USDJPY,H1: uninit reason 3
+0	09:08:31.889	RSI USDJPY,H1: uninit reason 3
+0	09:08:31.889	ZigZag_DowT USDJPY,M30: initialized
+0	09:08:31.890	RSI USDJPY,M30: initialized
+0	09:08:35.140	ZigZag_DowT USDJPY,M30: uninit reason 3
+0	09:08:35.140	RSI USDJPY,M30: uninit reason 3
+0	09:08:35.140	ZigZag_DowT USDJPY,M15: initialized
+0	09:08:35.140	RSI USDJPY,M15: initialized
+0	09:08:42.380	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	09:08:42.380	RSI USDJPY,M15: uninit reason 3
+0	09:08:42.380	ZigZag_DowT USDJPY,M5: initialized
+0	09:08:42.380	RSI USDJPY,M5: initialized
+0	09:08:44.980	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:08:44.981	RSI USDJPY,M5: uninit reason 3
+0	09:08:44.981	ZigZag_DowT USDJPY,M1: initialized
+0	09:08:44.981	RSI USDJPY,M1: initialized
+0	09:08:56.380	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	09:08:56.381	RSI USDJPY,M1: uninit reason 3
+0	09:08:56.381	ZigZag_DowT USDJPY,M5: initialized
+0	09:08:56.382	RSI USDJPY,M5: initialized
+0	09:08:59.210	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:08:59.210	RSI USDJPY,M5: uninit reason 3
+0	09:08:59.210	ZigZag_DowT USDJPY,M1: initialized
+0	09:08:59.211	RSI USDJPY,M1: initialized
+0	09:52:00.528	ZigZag_DowT USDJPY,M1: Alert: Short Entry Chance!
+0	09:55:32.095	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	09:55:32.098	RSI USDJPY,M1: uninit reason 3
+0	09:55:32.099	ZigZag_DowT USDJPY,M5: initialized
+0	09:55:32.100	RSI USDJPY,M5: initialized
+0	09:55:41.295	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:55:41.295	RSI USDJPY,M5: uninit reason 3
+0	09:55:41.295	ZigZag_DowT USDJPY,M1: initialized
+0	09:55:41.296	RSI USDJPY,M1: initialized
+0	09:55:54.645	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	09:55:54.649	RSI USDJPY,M1: uninit reason 3
+0	09:55:54.649	ZigZag_DowT USDJPY,M5: initialized
+0	09:55:54.649	RSI USDJPY,M5: initialized
+0	09:56:19.625	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:56:19.625	RSI USDJPY,M5: uninit reason 3
+0	09:56:19.626	ZigZag_DowT USDJPY,M15: initialized
+0	09:56:19.626	RSI USDJPY,M15: initialized
+0	09:56:28.006	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	09:56:28.007	RSI USDJPY,M15: uninit reason 3
+0	09:56:28.007	ZigZag_DowT USDJPY,M5: initialized
+0	09:56:28.007	RSI USDJPY,M5: initialized
+0	09:59:56.062	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	09:59:56.062	RSI USDJPY,M5: uninit reason 3
+0	09:59:56.062	ZigZag_DowT USDJPY,M15: initialized
+0	09:59:56.064	RSI USDJPY,M15: initialized
+0	10:09:28.026	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	10:09:28.026	RSI USDJPY,M15: uninit reason 3
+0	10:09:28.027	ZigZag_DowT USDJPY,M5: initialized
+0	10:09:28.028	RSI USDJPY,M5: initialized
+0	10:09:31.787	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	10:09:31.787	RSI USDJPY,M5: uninit reason 3
+0	10:09:31.788	ZigZag_DowT USDJPY,M1: initialized
+0	10:09:31.788	RSI USDJPY,M1: initialized
+0	10:09:56.918	TestCloseLine GBPUSD,M1: uninit reason 3
+0	10:09:56.924	TestCloseLine GBPUSD,M5: initialized
+0	10:10:53.839	TestCloseLine GBPUSD,M5: uninit reason 1
+0	10:10:53.840	Custom indicator TestCloseLine GBPUSD,M5: removed
+0	10:10:59.376	Custom indicator TestCloseLine GBPUSD,M5: loaded successfully
+0	10:11:04.772	TestCloseLine GBPUSD,M5: initialized
+0	10:14:46.744	TestCloseLine GBPUSD,M5: uninit reason 1
+0	10:14:46.745	Custom indicator TestCloseLine GBPUSD,M5: removed
+0	10:14:57.381	Custom indicator TestCloseLine GBPUSD,M5: loaded successfully
+0	10:14:59.228	TestCloseLine GBPUSD,M5: initialized
+0	10:19:00.464	ZigZag_DowT USDJPY,M1: Alert: Short Entry Chance!
+0	10:21:10.719	ZigZag_DowT USDJPY,M1: uninit reason 9
+0	10:21:10.722	RSI USDJPY,M1: uninit reason 9
+0	10:21:10.722	ZigZag_DowT EURUSD,M1: uninit reason 9
+0	10:21:10.724	ZigZag_S-TYPE EURUSD,M1: uninit reason 9
+0	10:21:10.727	RSI EURUSD,M1: uninit reason 9
+0	10:21:10.727	ZigZag_S-TYPE GBPJPY,M1: uninit reason 9
+0	10:21:10.727	ZigZag_DowT AUDUSD,H1: uninit reason 9
+0	10:21:10.727	TestCloseLine GBPUSD,M5: uninit reason 9
+0	10:21:10.809	Custom indicator ZigZag_DowT USDJPY,M1: removed
+0	10:21:10.811	Custom indicator RSI USDJPY,M1: removed
+0	10:21:10.818	Custom indicator ZigZag_DowT EURUSD,M1: removed
+0	10:21:10.820	Custom indicator ZigZag_S-TYPE EURUSD,M1: removed
+0	10:21:10.821	Custom indicator RSI EURUSD,M1: removed
+0	10:21:10.827	Custom indicator ZigZag_S-TYPE GBPJPY,M1: removed
+0	10:21:10.832	Custom indicator ZigZag_DowT AUDUSD,H1: removed
+0	10:21:10.837	Custom indicator TestCloseLine GBPUSD,M5: removed
+0	10:21:13.833	Custom indicator ZigZag_DowT USDJPY,M1: loaded successfully
+0	10:21:13.840	Custom indicator RSI USDJPY,M1: loaded successfully
+0	10:21:13.852	ZigZag_DowT USDJPY,M1: initialized
+0	10:21:13.860	RSI USDJPY,M1: initialized
+0	10:21:13.919	Custom indicator ZigZag_DowT EURUSD,M1: loaded successfully
+0	10:21:13.927	Custom indicator ZigZag_S-TYPE EURUSD,M1: loaded successfully
+0	10:21:13.933	Custom indicator RSI EURUSD,M1: loaded successfully
+0	10:21:13.945	ZigZag_DowT EURUSD,M1: initialized
+0	10:21:13.958	ZigZag_S-TYPE EURUSD,M1: initialized
+0	10:21:13.966	RSI EURUSD,M1: initialized
+0	10:21:14.034	Custom indicator ZigZag_S-TYPE GBPJPY,M1: loaded successfully
+0	10:21:14.063	ZigZag_S-TYPE GBPJPY,M1: initialized
+0	10:21:14.114	Custom indicator ZigZag_DowT AUDUSD,H1: loaded successfully
+0	10:21:14.124	ZigZag_DowT AUDUSD,H1: initialized
+0	10:21:14.149	Custom indicator TestCloseLine GBPUSD,M5: loaded successfully
+0	10:21:14.156	TestCloseLine GBPUSD,M5: initialized
+0	10:21:18.436	TestCloseLine GBPUSD,M5: uninit reason 3
+0	10:21:18.440	TestCloseLine GBPUSD,M15: initialized
+0	10:21:28.366	TestCloseLine GBPUSD,M15: uninit reason 3
+0	10:21:28.370	TestCloseLine GBPUSD,Monthly: initialized
+1	10:21:28.370	TestCloseLine GBPUSD,Monthly: array out of range in 'TestCloseLine.mq4' (65,27)
+0	10:21:30.035	TestCloseLine GBPUSD,Monthly: uninit reason 3
+0	10:21:30.035	TestCloseLine GBPUSD,Weekly: initialized
+0	10:22:59.332	ZigZag_DowT USDJPY,M1: uninit reason 9
+0	10:22:59.334	RSI USDJPY,M1: uninit reason 9
+0	10:22:59.334	ZigZag_DowT EURUSD,M1: uninit reason 9
+0	10:22:59.337	ZigZag_S-TYPE EURUSD,M1: uninit reason 9
+0	10:22:59.340	RSI EURUSD,M1: uninit reason 9
+0	10:22:59.340	ZigZag_S-TYPE GBPJPY,M1: uninit reason 9
+0	10:22:59.348	ZigZag_DowT AUDUSD,H1: uninit reason 9
+0	10:22:59.348	TestCloseLine GBPUSD,Weekly: uninit reason 9
+0	10:22:59.391	Custom indicator ZigZag_DowT USDJPY,M1: removed
+0	10:22:59.393	Custom indicator RSI USDJPY,M1: removed
+0	10:22:59.399	Custom indicator ZigZag_DowT EURUSD,M1: removed
+0	10:22:59.401	Custom indicator ZigZag_S-TYPE EURUSD,M1: removed
+0	10:22:59.401	Custom indicator RSI EURUSD,M1: removed
+0	10:22:59.404	Custom indicator ZigZag_S-TYPE GBPJPY,M1: removed
+0	10:22:59.407	Custom indicator ZigZag_DowT AUDUSD,H1: removed
+0	10:22:59.412	Custom indicator TestCloseLine GBPUSD,Weekly: removed
+0	10:23:05.149	Custom indicator ZigZag_DowT USDJPY,M1: loaded successfully
+0	10:23:05.156	Custom indicator RSI USDJPY,M1: loaded successfully
+0	10:23:05.167	ZigZag_DowT USDJPY,M1: initialized
+0	10:23:05.176	RSI USDJPY,M1: initialized
+0	10:23:05.235	Custom indicator ZigZag_DowT EURUSD,M1: loaded successfully
+0	10:23:05.242	Custom indicator ZigZag_S-TYPE EURUSD,M1: loaded successfully
+0	10:23:05.249	Custom indicator RSI EURUSD,M1: loaded successfully
+0	10:23:05.260	ZigZag_DowT EURUSD,M1: initialized
+0	10:23:05.274	ZigZag_S-TYPE EURUSD,M1: initialized
+0	10:23:05.282	RSI EURUSD,M1: initialized
+0	10:23:05.340	Custom indicator ZigZag_S-TYPE GBPJPY,M1: loaded successfully
+0	10:23:05.356	ZigZag_S-TYPE GBPJPY,M1: initialized
+0	10:23:05.400	Custom indicator ZigZag_DowT AUDUSD,H1: loaded successfully
+0	10:23:05.409	ZigZag_DowT AUDUSD,H1: initialized
+0	10:23:05.434	Custom indicator TestCloseLine GBPUSD,Weekly: loaded successfully
+0	10:23:05.442	TestCloseLine GBPUSD,Weekly: initialized
+0	10:25:36.250	ZigZag_DowT USDJPY,M1: uninit reason 9
+0	10:25:36.253	RSI USDJPY,M1: uninit reason 9
+0	10:25:36.253	ZigZag_DowT EURUSD,M1: uninit reason 9
+0	10:25:36.255	ZigZag_S-TYPE EURUSD,M1: uninit reason 9
+0	10:25:36.258	RSI EURUSD,M1: uninit reason 9
+0	10:25:36.258	ZigZag_S-TYPE GBPJPY,M1: uninit reason 9
+0	10:25:36.266	ZigZag_DowT AUDUSD,H1: uninit reason 9
+0	10:25:36.266	TestCloseLine GBPUSD,Weekly: uninit reason 9
+0	10:25:36.314	Custom indicator ZigZag_DowT USDJPY,M1: removed
+0	10:25:36.316	Custom indicator RSI USDJPY,M1: removed
+0	10:25:36.320	Custom indicator ZigZag_DowT EURUSD,M1: removed
+0	10:25:36.321	Custom indicator ZigZag_S-TYPE EURUSD,M1: removed
+0	10:25:36.323	Custom indicator RSI EURUSD,M1: removed
+0	10:25:36.326	Custom indicator ZigZag_S-TYPE GBPJPY,M1: removed
+0	10:25:36.329	Custom indicator ZigZag_DowT AUDUSD,H1: removed
+0	10:25:36.335	Custom indicator TestCloseLine GBPUSD,Weekly: removed
+0	10:25:40.829	Custom indicator ZigZag_DowT USDJPY,M1: loaded successfully
+0	10:25:40.836	Custom indicator RSI USDJPY,M1: loaded successfully
+0	10:25:40.848	ZigZag_DowT USDJPY,M1: initialized
+0	10:25:40.856	RSI USDJPY,M1: initialized
+0	10:25:40.916	Custom indicator ZigZag_DowT EURUSD,M1: loaded successfully
+0	10:25:40.924	Custom indicator ZigZag_S-TYPE EURUSD,M1: loaded successfully
+0	10:25:40.931	Custom indicator RSI EURUSD,M1: loaded successfully
+0	10:25:40.941	ZigZag_DowT EURUSD,M1: initialized
+0	10:25:40.955	ZigZag_S-TYPE EURUSD,M1: initialized
+0	10:25:40.963	RSI EURUSD,M1: initialized
+0	10:25:41.019	Custom indicator ZigZag_S-TYPE GBPJPY,M1: loaded successfully
+0	10:25:41.035	ZigZag_S-TYPE GBPJPY,M1: initialized
+0	10:25:41.078	Custom indicator ZigZag_DowT AUDUSD,H1: loaded successfully
+0	10:25:41.088	ZigZag_DowT AUDUSD,H1: initialized
+3	10:25:41.106	cannot open file 'C:\Users\outsi\AppData\Roaming\MetaQuotes\Terminal\88673E45C9407DA54B2B07B8536D457F\MQL4\indicators\TestCloseLine.ex4' [2]
+0	10:25:52.458	Custom indicator TestColeLine GBPUSD,Weekly: loaded successfully
+0	10:25:55.545	TestColeLine GBPUSD,Weekly: initialized
+0	10:26:40.244	TestColeLine GBPUSD,Weekly: uninit reason 2
+0	10:26:40.245	Custom indicator TestColeLine GBPUSD,Weekly: removed
+0	10:26:40.252	Custom indicator TestColeLine GBPUSD,Weekly: loaded successfully
+0	10:26:40.260	TestColeLine GBPUSD,Weekly: initialized
+0	11:07:01.162	ZigZag_DowT USDJPY,M1: Alert: Short Entry Chance!
+0	11:26:35.288	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	11:26:35.290	RSI USDJPY,M1: uninit reason 3
+0	11:26:35.291	ZigZag_DowT USDJPY,M15: initialized
+0	11:26:35.292	RSI USDJPY,M15: initialized
+0	11:26:35.341	ZigZag_DowT USDJPY,M15: Alert: Short Entry Chance!
+0	11:26:39.108	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	11:26:39.108	RSI USDJPY,M15: uninit reason 3
+0	11:26:39.112	ZigZag_DowT USDJPY,H1: initialized
+0	11:26:39.113	RSI USDJPY,H1: initialized
+0	11:26:41.538	ZigZag_DowT USDJPY,H1: uninit reason 3
+0	11:26:41.538	RSI USDJPY,H1: uninit reason 3
+0	11:26:41.538	ZigZag_DowT USDJPY,M15: initialized
+0	11:26:41.539	RSI USDJPY,M15: initialized
+0	11:26:41.544	ZigZag_DowT USDJPY,M15: Alert: Short Entry Chance!
+0	11:26:45.738	ZigZag_DowT USDJPY,M15: uninit reason 3
+0	11:26:45.739	RSI USDJPY,M15: uninit reason 3
+0	11:26:45.742	ZigZag_DowT USDJPY,M5: initialized
+0	11:26:45.743	RSI USDJPY,M5: initialized
+0	11:26:46.578	ZigZag_DowT USDJPY,M5: uninit reason 3
+0	11:26:46.579	RSI USDJPY,M5: uninit reason 3
+0	11:26:46.579	ZigZag_DowT USDJPY,M1: initialized
+0	11:26:46.580	RSI USDJPY,M1: initialized
+0	11:26:50.088	ZigZag_DowT USDJPY,M1: uninit reason 3
+0	11:26:50.090	RSI USDJPY,M1: uninit reason 3
+0	11:26:50.091	ZigZag_DowT USDJPY,M15: initialized
+0	11:26:50.091	RSI USDJPY,M15: initialized
+0	11:26:50.096	ZigZag_DowT USDJPY,M15: Alert: Short Entry Chance!

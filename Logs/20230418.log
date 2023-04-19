@@ -1,0 +1,474 @@
+0	08:36:05.666	Bands USDJPY,M5: uninit reason 3
+0	08:36:05.666	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	08:36:05.673	RSI USDJPY,M5: uninit reason 3
+0	08:36:05.678	Bands USDJPY,H1: initialized
+0	08:36:05.679	ZigZag_S-TYPE USDJPY,H1: initialized
+0	08:36:05.679	RSI USDJPY,H1: initialized
+0	08:36:14.857	Bands USDJPY,H1: uninit reason 3
+0	08:36:14.857	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	08:36:14.863	RSI USDJPY,H1: uninit reason 3
+0	08:36:14.863	Bands USDJPY,H4: initialized
+0	08:36:14.864	ZigZag_S-TYPE USDJPY,H4: initialized
+0	08:36:14.864	RSI USDJPY,H4: initialized
+0	08:36:29.477	Bands USDJPY,H4: uninit reason 3
+0	08:36:29.477	ZigZag_S-TYPE USDJPY,H4: uninit reason 3
+0	08:36:29.482	RSI USDJPY,H4: uninit reason 3
+0	08:36:29.486	Bands USDJPY,Daily: initialized
+0	08:36:29.486	ZigZag_S-TYPE USDJPY,Daily: initialized
+0	08:36:29.487	RSI USDJPY,Daily: initialized
+0	08:36:48.599	Bands USDJPY,Daily: uninit reason 3
+0	08:36:48.599	ZigZag_S-TYPE USDJPY,Daily: uninit reason 3
+0	08:36:48.600	RSI USDJPY,Daily: uninit reason 3
+0	08:36:48.602	Bands USDJPY,H1: initialized
+0	08:36:48.603	ZigZag_S-TYPE USDJPY,H1: initialized
+0	08:36:48.603	RSI USDJPY,H1: initialized
+0	08:43:09.009	Bands USDJPY,H1: uninit reason 3
+0	08:43:09.009	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	08:43:09.015	RSI USDJPY,H1: uninit reason 3
+0	08:43:09.015	Bands USDJPY,M1: initialized
+0	08:43:09.015	ZigZag_S-TYPE USDJPY,M1: initialized
+0	08:43:09.015	RSI USDJPY,M1: initialized
+0	08:43:18.859	Bands USDJPY,M1: uninit reason 3
+0	08:43:18.859	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	08:43:18.875	RSI USDJPY,M1: uninit reason 3
+0	08:43:18.875	Bands USDJPY,M5: initialized
+0	08:43:18.875	ZigZag_S-TYPE USDJPY,M5: initialized
+0	08:43:18.875	RSI USDJPY,M5: initialized
+0	08:43:36.979	Bands USDJPY,M5: uninit reason 3
+0	08:43:36.979	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	08:43:36.986	RSI USDJPY,M5: uninit reason 3
+0	08:43:36.994	Bands USDJPY,M15: initialized
+0	08:43:36.994	ZigZag_S-TYPE USDJPY,M15: initialized
+0	08:43:36.994	RSI USDJPY,M15: initialized
+0	08:43:53.910	Bands USDJPY,M15: uninit reason 3
+0	08:43:53.910	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	08:43:53.920	RSI USDJPY,M15: uninit reason 3
+0	08:43:53.920	Bands USDJPY,M5: initialized
+0	08:43:53.921	ZigZag_S-TYPE USDJPY,M5: initialized
+0	08:43:53.921	RSI USDJPY,M5: initialized
+0	08:43:55.100	Bands USDJPY,M5: uninit reason 3
+0	08:43:55.100	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	08:43:55.106	RSI USDJPY,M5: uninit reason 3
+0	08:43:55.108	Bands USDJPY,M15: initialized
+0	08:43:55.108	ZigZag_S-TYPE USDJPY,M15: initialized
+0	08:43:55.108	RSI USDJPY,M15: initialized
+0	08:44:02.550	Bands USDJPY,M15: uninit reason 3
+0	08:44:02.550	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	08:44:02.557	RSI USDJPY,M15: uninit reason 3
+0	08:44:02.558	Bands USDJPY,H1: initialized
+0	08:44:02.559	ZigZag_S-TYPE USDJPY,H1: initialized
+0	08:44:02.559	RSI USDJPY,H1: initialized
+0	08:47:59.337	Bands USDJPY,H1: uninit reason 3
+0	08:47:59.337	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	08:47:59.347	RSI USDJPY,H1: uninit reason 3
+0	08:47:59.354	Bands USDJPY,M30: initialized
+0	08:47:59.355	ZigZag_S-TYPE USDJPY,M30: initialized
+0	08:47:59.355	RSI USDJPY,M30: initialized
+0	08:48:10.447	Bands USDJPY,M30: uninit reason 3
+0	08:48:10.447	ZigZag_S-TYPE USDJPY,M30: uninit reason 3
+0	08:48:10.453	RSI USDJPY,M30: uninit reason 3
+0	08:48:10.456	Bands USDJPY,M15: initialized
+0	08:48:10.456	ZigZag_S-TYPE USDJPY,M15: initialized
+0	08:48:10.456	RSI USDJPY,M15: initialized
+0	08:49:52.430	Bands USDJPY,M15: uninit reason 3
+0	08:49:52.430	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	08:49:52.436	RSI USDJPY,M15: uninit reason 3
+0	08:49:52.436	Bands USDJPY,M1: initialized
+0	08:49:52.437	ZigZag_S-TYPE USDJPY,M1: initialized
+0	08:49:52.437	RSI USDJPY,M1: initialized
+0	08:52:22.035	Bands USDJPY,M1: uninit reason 3
+0	08:52:22.035	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	08:52:22.043	RSI USDJPY,M1: uninit reason 3
+0	08:52:22.043	Bands USDJPY,M5: initialized
+0	08:52:22.044	ZigZag_S-TYPE USDJPY,M5: initialized
+0	08:52:22.044	RSI USDJPY,M5: initialized
+0	08:52:32.185	Bands USDJPY,M5: uninit reason 3
+0	08:52:32.185	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	08:52:32.185	RSI USDJPY,M5: uninit reason 3
+0	08:52:32.190	Bands USDJPY,H1: initialized
+0	08:52:32.191	ZigZag_S-TYPE USDJPY,H1: initialized
+0	08:52:32.191	RSI USDJPY,H1: initialized
+0	08:52:38.525	Bands USDJPY,H1: uninit reason 3
+0	08:52:38.525	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	08:52:38.525	RSI USDJPY,H1: uninit reason 3
+0	08:52:38.530	Bands USDJPY,M30: initialized
+0	08:52:38.530	ZigZag_S-TYPE USDJPY,M30: initialized
+0	08:52:38.530	RSI USDJPY,M30: initialized
+0	08:52:45.647	Bands USDJPY,M30: uninit reason 3
+0	08:52:45.647	ZigZag_S-TYPE USDJPY,M30: uninit reason 3
+0	08:52:45.647	RSI USDJPY,M30: uninit reason 3
+0	08:52:45.652	Bands USDJPY,M15: initialized
+0	08:52:45.653	ZigZag_S-TYPE USDJPY,M15: initialized
+0	08:52:45.653	RSI USDJPY,M15: initialized
+0	08:52:49.185	Bands USDJPY,M15: uninit reason 3
+0	08:52:49.185	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	08:52:49.185	RSI USDJPY,M15: uninit reason 3
+0	08:52:49.185	Bands USDJPY,M30: initialized
+0	08:52:49.186	ZigZag_S-TYPE USDJPY,M30: initialized
+0	08:52:49.186	RSI USDJPY,M30: initialized
+0	08:52:50.025	Bands USDJPY,M30: uninit reason 3
+0	08:52:50.025	ZigZag_S-TYPE USDJPY,M30: uninit reason 3
+0	08:52:50.026	RSI USDJPY,M30: uninit reason 3
+0	08:52:50.026	Bands USDJPY,H1: initialized
+0	08:52:50.026	ZigZag_S-TYPE USDJPY,H1: initialized
+0	08:52:50.027	RSI USDJPY,H1: initialized
+0	08:52:53.085	Bands USDJPY,H1: uninit reason 3
+0	08:52:53.085	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	08:52:53.085	RSI USDJPY,H1: uninit reason 3
+0	08:52:53.085	Bands USDJPY,M15: initialized
+0	08:52:53.086	ZigZag_S-TYPE USDJPY,M15: initialized
+0	08:52:53.086	RSI USDJPY,M15: initialized
+0	08:52:54.495	Bands USDJPY,M15: uninit reason 3
+0	08:52:54.495	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	08:52:54.496	RSI USDJPY,M15: uninit reason 3
+0	08:52:54.496	Bands USDJPY,M1: initialized
+0	08:52:54.496	ZigZag_S-TYPE USDJPY,M1: initialized
+0	08:52:54.496	RSI USDJPY,M1: initialized
+0	08:53:22.696	Bands USDJPY,M1: uninit reason 3
+0	08:53:22.696	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	08:53:22.706	RSI USDJPY,M1: uninit reason 3
+0	08:53:22.706	Bands USDJPY,M15: initialized
+0	08:53:22.707	ZigZag_S-TYPE USDJPY,M15: initialized
+0	08:53:22.707	RSI USDJPY,M15: initialized
+0	08:54:09.518	Bands USDJPY,M15: uninit reason 3
+0	08:54:09.518	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	08:54:09.518	RSI USDJPY,M15: uninit reason 3
+0	08:54:09.518	Bands USDJPY,M5: initialized
+0	08:54:09.519	ZigZag_S-TYPE USDJPY,M5: initialized
+0	08:54:09.519	RSI USDJPY,M5: initialized
+0	08:54:11.017	Bands USDJPY,M5: uninit reason 3
+0	08:54:11.017	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	08:54:11.018	RSI USDJPY,M5: uninit reason 3
+0	08:54:11.018	Bands USDJPY,M1: initialized
+0	08:54:11.019	ZigZag_S-TYPE USDJPY,M1: initialized
+0	08:54:11.019	RSI USDJPY,M1: initialized
+0	08:54:13.617	Bands USDJPY,M1: uninit reason 3
+0	08:54:13.617	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	08:54:13.626	RSI USDJPY,M1: uninit reason 3
+0	08:54:13.626	Bands USDJPY,M5: initialized
+0	08:54:13.627	ZigZag_S-TYPE USDJPY,M5: initialized
+0	08:54:13.627	RSI USDJPY,M5: initialized
+0	08:55:11.899	Bands USDJPY,M5: uninit reason 3
+0	08:55:11.899	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	08:55:11.899	RSI USDJPY,M5: uninit reason 3
+0	08:55:11.900	Bands USDJPY,M1: initialized
+0	08:55:11.900	ZigZag_S-TYPE USDJPY,M1: initialized
+0	08:55:11.900	RSI USDJPY,M1: initialized
+0	08:56:24.541	Bands USDJPY,M1: uninit reason 3
+0	08:56:24.541	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	08:56:24.551	RSI USDJPY,M1: uninit reason 3
+0	08:56:24.551	Bands USDJPY,M5: initialized
+0	08:56:24.551	ZigZag_S-TYPE USDJPY,M5: initialized
+0	08:56:24.551	RSI USDJPY,M5: initialized
+0	08:56:46.312	Bands USDJPY,M5: uninit reason 3
+0	08:56:46.312	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	08:56:46.312	RSI USDJPY,M5: uninit reason 3
+0	08:56:46.313	Bands USDJPY,M1: initialized
+0	08:56:46.313	ZigZag_S-TYPE USDJPY,M1: initialized
+0	08:56:46.313	RSI USDJPY,M1: initialized
+0	08:58:24.224	Bands USDJPY,M1: uninit reason 3
+0	08:58:24.224	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	08:58:24.233	RSI USDJPY,M1: uninit reason 3
+0	08:58:24.233	Bands USDJPY,M5: initialized
+0	08:58:24.233	ZigZag_S-TYPE USDJPY,M5: initialized
+0	08:58:24.233	RSI USDJPY,M5: initialized
+0	09:03:44.374	Bands USDJPY,M5: uninit reason 3
+0	09:03:44.374	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:03:44.374	RSI USDJPY,M5: uninit reason 3
+0	09:03:44.375	Bands USDJPY,M1: initialized
+0	09:03:44.376	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:03:44.376	RSI USDJPY,M1: initialized
+0	09:03:57.824	Bands USDJPY,M1: uninit reason 3
+0	09:03:57.824	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:03:57.833	RSI USDJPY,M1: uninit reason 3
+0	09:03:57.833	Bands USDJPY,M5: initialized
+0	09:03:57.833	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:03:57.833	RSI USDJPY,M5: initialized
+0	09:04:07.794	Bands USDJPY,M5: uninit reason 3
+0	09:04:07.794	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:04:07.794	RSI USDJPY,M5: uninit reason 3
+0	09:04:07.795	Bands USDJPY,M1: initialized
+0	09:04:07.795	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:04:07.795	RSI USDJPY,M1: initialized
+0	09:04:21.885	Bands USDJPY,M1: uninit reason 3
+0	09:04:21.885	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:04:21.894	RSI USDJPY,M1: uninit reason 3
+0	09:04:21.894	Bands USDJPY,M5: initialized
+0	09:04:21.895	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:04:21.895	RSI USDJPY,M5: initialized
+0	09:04:23.854	Bands USDJPY,M5: uninit reason 3
+0	09:04:23.854	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:04:23.855	RSI USDJPY,M5: uninit reason 3
+0	09:04:23.855	Bands USDJPY,M15: initialized
+0	09:04:23.855	ZigZag_S-TYPE USDJPY,M15: initialized
+0	09:04:23.855	RSI USDJPY,M15: initialized
+0	09:04:29.386	Bands USDJPY,M15: uninit reason 3
+0	09:04:29.386	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	09:04:29.386	RSI USDJPY,M15: uninit reason 3
+0	09:04:29.386	Bands USDJPY,M1: initialized
+0	09:04:29.387	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:04:29.387	RSI USDJPY,M1: initialized
+0	09:05:42.656	Bands USDJPY,M1: uninit reason 3
+0	09:05:42.656	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:05:42.666	RSI USDJPY,M1: uninit reason 3
+0	09:05:42.666	Bands USDJPY,M30: initialized
+0	09:05:42.667	ZigZag_S-TYPE USDJPY,M30: initialized
+0	09:05:42.667	RSI USDJPY,M30: initialized
+0	09:06:26.268	Bands USDJPY,M30: uninit reason 3
+0	09:06:26.268	ZigZag_S-TYPE USDJPY,M30: uninit reason 3
+0	09:06:26.269	RSI USDJPY,M30: uninit reason 3
+0	09:06:26.269	Bands USDJPY,M1: initialized
+0	09:06:26.269	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:06:26.270	RSI USDJPY,M1: initialized
+0	09:06:44.588	Bands USDJPY,M1: uninit reason 3
+0	09:06:44.588	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:06:44.597	RSI USDJPY,M1: uninit reason 3
+0	09:06:44.597	Bands USDJPY,M5: initialized
+0	09:06:44.598	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:06:44.598	RSI USDJPY,M5: initialized
+0	09:06:47.679	Bands USDJPY,M5: uninit reason 3
+0	09:06:47.679	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:06:47.680	RSI USDJPY,M5: uninit reason 3
+0	09:06:47.680	Bands USDJPY,M1: initialized
+0	09:06:47.680	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:06:47.680	RSI USDJPY,M1: initialized
+0	09:09:28.503	Bands USDJPY,M1: uninit reason 3
+0	09:09:28.503	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:09:28.513	RSI USDJPY,M1: uninit reason 3
+0	09:09:28.513	Bands USDJPY,M5: initialized
+0	09:09:28.514	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:09:28.514	RSI USDJPY,M5: initialized
+0	09:11:12.716	Bands USDJPY,M5: uninit reason 3
+0	09:11:12.716	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:11:12.717	RSI USDJPY,M5: uninit reason 3
+0	09:11:12.717	Bands USDJPY,M30: initialized
+0	09:11:12.717	ZigZag_S-TYPE USDJPY,M30: initialized
+0	09:11:12.717	RSI USDJPY,M30: initialized
+0	09:11:44.417	Bands USDJPY,M30: uninit reason 3
+0	09:11:44.417	ZigZag_S-TYPE USDJPY,M30: uninit reason 3
+0	09:11:44.423	RSI USDJPY,M30: uninit reason 3
+0	09:11:44.424	Bands USDJPY,M1: initialized
+0	09:11:44.424	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:11:44.424	RSI USDJPY,M1: initialized
+0	09:15:36.003	Bands USDJPY,M1: uninit reason 3
+0	09:15:36.003	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:15:36.012	RSI USDJPY,M1: uninit reason 3
+0	09:15:36.012	Bands USDJPY,M5: initialized
+0	09:15:36.013	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:15:36.013	RSI USDJPY,M5: initialized
+0	09:15:40.613	Bands USDJPY,M5: uninit reason 3
+0	09:15:40.613	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:15:40.621	RSI USDJPY,M5: uninit reason 3
+0	09:15:40.621	Bands USDJPY,M1: initialized
+0	09:15:40.622	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:15:40.622	RSI USDJPY,M1: initialized
+0	09:35:35.740	Bands USDJPY,M1: uninit reason 3
+0	09:35:35.740	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:35:35.747	RSI USDJPY,M1: uninit reason 3
+0	09:35:35.747	Bands USDJPY,M5: initialized
+0	09:35:35.748	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:35:35.748	RSI USDJPY,M5: initialized
+0	09:35:42.848	Bands USDJPY,M5: uninit reason 3
+0	09:35:42.848	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:35:42.859	RSI USDJPY,M5: uninit reason 3
+0	09:35:42.860	Bands USDJPY,M1: initialized
+0	09:35:42.860	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:35:42.860	RSI USDJPY,M1: initialized
+0	09:35:45.698	Bands USDJPY,M1: uninit reason 3
+0	09:35:45.698	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:35:45.706	RSI USDJPY,M1: uninit reason 3
+0	09:35:45.706	Bands USDJPY,M5: initialized
+0	09:35:45.706	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:35:45.706	RSI USDJPY,M5: initialized
+0	09:35:49.627	Bands USDJPY,M5: uninit reason 3
+0	09:35:49.627	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:35:49.634	RSI USDJPY,M5: uninit reason 3
+0	09:35:49.634	Bands USDJPY,M1: initialized
+0	09:35:49.635	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:35:49.635	RSI USDJPY,M1: initialized
+0	09:39:41.364	Bands USDJPY,M1: uninit reason 3
+0	09:39:41.364	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:39:41.371	RSI USDJPY,M1: uninit reason 3
+0	09:39:41.372	Bands USDJPY,M5: initialized
+0	09:39:41.372	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:39:41.372	RSI USDJPY,M5: initialized
+0	09:39:43.114	Bands USDJPY,M5: uninit reason 3
+0	09:39:43.114	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:39:43.120	RSI USDJPY,M5: uninit reason 3
+0	09:39:43.122	Bands USDJPY,M15: initialized
+0	09:39:43.122	ZigZag_S-TYPE USDJPY,M15: initialized
+0	09:39:43.122	RSI USDJPY,M15: initialized
+0	09:39:56.794	Bands USDJPY,M15: uninit reason 3
+0	09:39:56.794	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	09:39:56.800	RSI USDJPY,M15: uninit reason 3
+0	09:39:56.801	Bands USDJPY,M1: initialized
+0	09:39:56.802	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:39:56.802	RSI USDJPY,M1: initialized
+0	09:41:36.937	Bands USDJPY,M1: uninit reason 3
+0	09:41:36.937	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	09:41:36.946	RSI USDJPY,M1: uninit reason 3
+0	09:41:36.946	Bands USDJPY,M5: initialized
+0	09:41:36.947	ZigZag_S-TYPE USDJPY,M5: initialized
+0	09:41:36.947	RSI USDJPY,M5: initialized
+0	09:41:39.497	Bands USDJPY,M5: uninit reason 3
+0	09:41:39.497	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	09:41:39.504	RSI USDJPY,M5: uninit reason 3
+0	09:41:39.506	Bands USDJPY,H1: initialized
+0	09:41:39.507	ZigZag_S-TYPE USDJPY,H1: initialized
+0	09:41:39.507	RSI USDJPY,H1: initialized
+0	09:41:45.877	Bands USDJPY,H1: uninit reason 3
+0	09:41:45.877	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	09:41:45.883	RSI USDJPY,H1: uninit reason 3
+0	09:41:45.884	Bands USDJPY,H4: initialized
+0	09:41:45.884	ZigZag_S-TYPE USDJPY,H4: initialized
+0	09:41:45.884	RSI USDJPY,H4: initialized
+0	09:42:10.498	Bands USDJPY,H4: uninit reason 3
+0	09:42:10.498	ZigZag_S-TYPE USDJPY,H4: uninit reason 3
+0	09:42:10.502	RSI USDJPY,H4: uninit reason 3
+0	09:42:10.505	Bands USDJPY,H1: initialized
+0	09:42:10.505	ZigZag_S-TYPE USDJPY,H1: initialized
+0	09:42:10.505	RSI USDJPY,H1: initialized
+0	09:42:28.638	Bands USDJPY,H1: uninit reason 3
+0	09:42:28.638	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	09:42:28.646	RSI USDJPY,H1: uninit reason 3
+0	09:42:28.646	Bands USDJPY,M1: initialized
+0	09:42:28.647	ZigZag_S-TYPE USDJPY,M1: initialized
+0	09:42:28.647	RSI USDJPY,M1: initialized
+0	10:00:21.597	Bands USDJPY,M1: uninit reason 3
+0	10:00:21.597	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	10:00:21.612	RSI USDJPY,M1: uninit reason 3
+0	10:00:21.613	Bands USDJPY,M5: initialized
+0	10:00:21.613	ZigZag_S-TYPE USDJPY,M5: initialized
+0	10:00:21.613	RSI USDJPY,M5: initialized
+0	10:00:27.188	Bands USDJPY,M5: uninit reason 3
+0	10:00:27.188	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	10:00:27.195	RSI USDJPY,M5: uninit reason 3
+0	10:00:27.195	Bands USDJPY,M1: initialized
+0	10:00:27.195	ZigZag_S-TYPE USDJPY,M1: initialized
+0	10:00:27.196	RSI USDJPY,M1: initialized
+0	10:42:15.258	Bands USDJPY,M1: uninit reason 3
+0	10:42:15.258	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	10:42:15.270	RSI USDJPY,M1: uninit reason 3
+0	10:42:15.273	Bands USDJPY,H1: initialized
+0	10:42:15.274	ZigZag_S-TYPE USDJPY,H1: initialized
+0	10:42:15.274	RSI USDJPY,H1: initialized
+0	10:42:23.388	Bands USDJPY,H1: uninit reason 3
+0	10:42:23.388	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	10:42:23.399	RSI USDJPY,H1: uninit reason 3
+0	10:42:23.400	Bands USDJPY,M5: initialized
+0	10:42:23.401	ZigZag_S-TYPE USDJPY,M5: initialized
+0	10:42:23.401	RSI USDJPY,M5: initialized
+0	10:42:25.408	Bands USDJPY,M5: uninit reason 3
+0	10:42:25.408	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	10:42:25.416	RSI USDJPY,M5: uninit reason 3
+0	10:42:25.416	Bands USDJPY,M1: initialized
+0	10:42:25.417	ZigZag_S-TYPE USDJPY,M1: initialized
+0	10:42:25.417	RSI USDJPY,M1: initialized
+0	12:17:10.803	Bands USDJPY,M1: uninit reason 3
+0	12:17:10.803	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	12:17:10.811	RSI USDJPY,M1: uninit reason 3
+0	12:17:10.811	Bands USDJPY,M5: initialized
+0	12:17:10.812	ZigZag_S-TYPE USDJPY,M5: initialized
+0	12:17:10.812	RSI USDJPY,M5: initialized
+0	12:17:14.672	Bands USDJPY,M5: uninit reason 3
+0	12:17:14.672	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	12:17:14.686	RSI USDJPY,M5: uninit reason 3
+0	12:17:14.688	Bands USDJPY,H1: initialized
+0	12:17:14.689	ZigZag_S-TYPE USDJPY,H1: initialized
+0	12:17:14.689	RSI USDJPY,H1: initialized
+0	12:17:22.753	Bands USDJPY,H1: uninit reason 3
+0	12:17:22.753	ZigZag_S-TYPE USDJPY,H1: uninit reason 3
+0	12:17:22.760	RSI USDJPY,H1: uninit reason 3
+0	12:17:22.761	Bands USDJPY,M15: initialized
+0	12:17:22.762	ZigZag_S-TYPE USDJPY,M15: initialized
+0	12:17:22.762	RSI USDJPY,M15: initialized
+0	12:17:30.593	Bands USDJPY,M15: uninit reason 3
+0	12:17:30.593	ZigZag_S-TYPE USDJPY,M15: uninit reason 3
+0	12:17:30.600	RSI USDJPY,M15: uninit reason 3
+0	12:17:30.600	Bands USDJPY,M1: initialized
+0	12:17:30.601	ZigZag_S-TYPE USDJPY,M1: initialized
+0	12:17:30.601	RSI USDJPY,M1: initialized
+0	14:17:19.569	Bands USDJPY,M1: uninit reason 3
+0	14:17:19.569	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	14:17:19.578	RSI USDJPY,M1: uninit reason 3
+0	14:17:19.578	Bands USDJPY,M5: initialized
+0	14:17:19.579	ZigZag_S-TYPE USDJPY,M5: initialized
+0	14:17:19.579	RSI USDJPY,M5: initialized
+0	15:33:36.994	Bands USDJPY,M5: uninit reason 3
+0	15:33:36.994	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	15:33:37.005	RSI USDJPY,M5: uninit reason 3
+0	15:33:37.006	Bands USDJPY,Daily: initialized
+0	15:33:37.007	ZigZag_S-TYPE USDJPY,Daily: initialized
+0	15:33:37.007	RSI USDJPY,Daily: initialized
+0	15:33:49.014	Bands USDJPY,Daily: uninit reason 3
+0	15:33:49.014	ZigZag_S-TYPE USDJPY,Daily: uninit reason 3
+0	15:33:49.016	RSI USDJPY,Daily: uninit reason 3
+0	15:33:49.016	Bands USDJPY,H4: initialized
+0	15:33:49.017	ZigZag_S-TYPE USDJPY,H4: initialized
+0	15:33:49.017	RSI USDJPY,H4: initialized
+0	15:50:37.172	Bands USDJPY,H4: uninit reason 3
+0	15:50:37.172	ZigZag_S-TYPE USDJPY,H4: uninit reason 3
+0	15:50:37.177	RSI USDJPY,H4: uninit reason 3
+0	15:50:37.178	Bands USDJPY,M5: initialized
+0	15:50:37.178	ZigZag_S-TYPE USDJPY,M5: initialized
+0	15:50:37.179	RSI USDJPY,M5: initialized
+0	16:37:24.934	Bands USDJPY,H4: uninit reason 4
+0	16:37:24.934	Bands USDJPY,H4: uninit reason 4
+0	16:37:24.934	ATR USDJPY,H4: uninit reason 4
+0	16:37:24.935	Custom indicator Bands USDJPY,H4: removed
+0	16:37:24.937	Custom indicator Bands USDJPY,H4: removed
+0	16:37:24.938	Custom indicator ATR USDJPY,H4: removed
+0	19:01:19.827	Bands USDJPY,M5: uninit reason 3
+0	19:01:19.827	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	19:01:19.833	RSI USDJPY,M5: uninit reason 3
+0	19:01:19.833	Bands USDJPY,M1: initialized
+0	19:01:19.834	ZigZag_S-TYPE USDJPY,M1: initialized
+0	19:01:19.834	RSI USDJPY,M1: initialized
+0	20:08:41.411	Custom indicator RSI USDJPY,M5: loaded successfully
+0	20:08:43.445	RSI USDJPY,M5: initialized
+0	20:44:03.610	RSI USDJPY,M5: uninit reason 3
+0	20:44:03.610	RSI USDJPY,H1: initialized
+0	20:44:32.031	RSI USDJPY,H1: uninit reason 3
+0	20:44:32.032	RSI USDJPY,M5: initialized
+0	20:44:47.253	RSI USDJPY,M5: uninit reason 3
+0	20:44:47.253	RSI USDJPY,M15: initialized
+0	20:45:28.003	RSI USDJPY,M15: uninit reason 3
+0	20:45:28.003	RSI USDJPY,M30: initialized
+0	20:46:26.488	RSI USDJPY,M30: uninit reason 3
+0	20:46:26.488	RSI USDJPY,H1: initialized
+0	20:51:51.683	Custom indicator Bands USDJPY,H1: loaded successfully
+0	20:52:07.070	Bands USDJPY,H1: initialized
+0	20:55:27.420	Bands USDJPY,H1: uninit reason 3
+0	20:55:27.420	RSI USDJPY,H1: uninit reason 3
+0	20:55:27.420	Bands USDJPY,M5: initialized
+0	20:55:27.421	RSI USDJPY,M5: initialized
+0	21:07:29.879	Bands USDJPY,M5: uninit reason 1
+0	21:07:29.880	Custom indicator Bands USDJPY,M5: removed
+0	21:24:53.265	RSI USDJPY,M5: uninit reason 4
+0	21:24:53.267	Custom indicator RSI USDJPY,M5: removed
+0	22:00:03.600	Bands USDJPY,M1: uninit reason 3
+0	22:00:03.600	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	22:00:03.608	RSI USDJPY,M1: uninit reason 3
+0	22:00:03.608	Bands USDJPY,M5: initialized
+0	22:00:03.609	ZigZag_S-TYPE USDJPY,M5: initialized
+0	22:00:03.609	RSI USDJPY,M5: initialized
+0	22:00:06.210	Bands USDJPY,M5: uninit reason 3
+0	22:00:06.210	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	22:00:06.217	RSI USDJPY,M5: uninit reason 3
+0	22:00:06.218	Bands USDJPY,M1: initialized
+0	22:00:06.218	ZigZag_S-TYPE USDJPY,M1: initialized
+0	22:00:06.218	RSI USDJPY,M1: initialized
+0	22:00:10.670	Bands USDJPY,M1: uninit reason 3
+0	22:00:10.670	ZigZag_S-TYPE USDJPY,M1: uninit reason 3
+0	22:00:10.678	RSI USDJPY,M1: uninit reason 3
+0	22:00:10.679	Bands USDJPY,M5: initialized
+0	22:00:10.679	ZigZag_S-TYPE USDJPY,M5: initialized
+0	22:00:10.679	RSI USDJPY,M5: initialized
+0	22:00:21.910	Bands USDJPY,M5: uninit reason 3
+0	22:00:21.910	ZigZag_S-TYPE USDJPY,M5: uninit reason 3
+0	22:00:21.917	RSI USDJPY,M5: uninit reason 3
+0	22:00:21.917	Bands USDJPY,M1: initialized
+0	22:00:21.917	ZigZag_S-TYPE USDJPY,M1: initialized
+0	22:00:21.918	RSI USDJPY,M1: initialized
+0	23:31:58.575	RSI USDJPY,M1: uninit reason 1
+0	23:31:58.576	Custom indicator RSI USDJPY,M1: removed
