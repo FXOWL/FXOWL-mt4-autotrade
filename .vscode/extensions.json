@@ -2,7 +2,6 @@
     "recommendations": [
         "keisukeiwabuchi.compilemql4",
         "nicholishen.mql-extension-pack",
-        "l-i-v.mql-tools",
         "cschlosser.doxdocgen"
     ]
 }
