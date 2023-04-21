@@ -1,2 +1,4 @@
 *.ex4
+mqlcache.dat
 compilemql4.log
+/Logs/*.log
