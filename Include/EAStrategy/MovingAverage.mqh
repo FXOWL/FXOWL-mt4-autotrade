@@ -24,22 +24,26 @@
  */
 class MovingAverage3Line {
    private:
-    double _ma1, _ma2, _ma3;
+    double _short, _middle, _long;
 
    public:
-    MovingAverage3Line(double ma1, double ma2, double ma3)
+    MovingAverage3Line(double short_line, double middle_line, double long_line)
     {
-        _ma1 = ma1;
-        _ma2 = ma2;
-        _ma3 = ma3;
+        _short = short_line;
+        _middle = middle_line;
+        _long = long_line;
     };
     // ~MovingAverage3Line();
-    bool IsStage1() { return _ma1 > _ma2 && _ma1 > _ma3 && _ma2 > _ma3; }; // 短期>中期>長期
-    bool IsStage2() { return _ma1 < _ma2 && _ma1 > _ma3 && _ma2 > _ma3; }; // 中期>短期>長期
-    bool IsStage3() { return _ma1 < _ma2 && _ma1 < _ma3 && _ma2 > _ma3; }; // 中期>長期>短期
-    bool IsStage4() { return _ma1 < _ma2 && _ma1 < _ma3 && _ma2 < _ma3; }; // 長期>中期>短期
-    bool IsStage5() { return _ma1 > _ma2 && _ma1 < _ma3 && _ma2 < _ma3; }; // 長期>短期>中期
-    bool IsStage6() { return _ma1 > _ma2 && _ma1 > _ma3 && _ma2 < _ma3; }; // 短期>長期>中期
+    double shortValue() { return _short; };
+    double middleValue() { return _short; };
+    double longValue() { return _short; };
+
+    bool IsStage1() { return _short > _middle && _short > _long && _middle > _long; }; // 短期>中期>長期
+    bool IsStage2() { return _short < _middle && _short > _long && _middle > _long; }; // 中期>短期>長期
+    bool IsStage3() { return _short < _middle && _short < _long && _middle > _long; }; // 中期>長期>短期
+    bool IsStage4() { return _short < _middle && _short < _long && _middle < _long; }; // 長期>中期>短期
+    bool IsStage5() { return _short > _middle && _short < _long && _middle < _long; }; // 長期>短期>中期
+    bool IsStage6() { return _short > _middle && _short > _long && _middle < _long; }; // 短期>長期>中期
     bool IsUpTorrend() { return IsStage6() || IsStage1() || IsStage2(); };
     bool IsDownTorrend() { return IsStage3() || IsStage4() || IsStage5(); };
     bool IsBuyEntry() { return IsStage1(); };
