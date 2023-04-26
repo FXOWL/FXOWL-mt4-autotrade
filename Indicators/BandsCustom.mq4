@@ -23,9 +23,9 @@
 //--- indicator parameters
 input int InpBandsPeriod = 20; // Bands Period
 input int InpBandsShift = 0; // Bands Shift
-input double InpBandsDeviations1 = 1.0; // Bands Deviations
-input double InpBandsDeviations2 = 2.0; // Bands Deviations
-input double InpBandsDeviations3 = 3.0; // Bands Deviations
+input double InpBandsDeviations1 = 1.0; // Bands Deviations1
+input double InpBandsDeviations2 = 2.0; // Bands Deviations2
+input double InpBandsDeviations3 = 3.0; // Bands Deviations3
 
 //--- buffers
 double ExtMovingBuffer[];
