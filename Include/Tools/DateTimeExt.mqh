@@ -48,7 +48,7 @@ int CDateTimeExt::TimeGmtOffsetOfMtSrv()
         const double offset = double(TimeGMT() - TimeCurrent());
         deviation = int(round(offset / sec_of_hour));
     }
-    Print("TimeGMTOffsetOfMTSrv:" + string(offset / sec_of_hour));
+
     return deviation * sec_of_hour;
 }
 
