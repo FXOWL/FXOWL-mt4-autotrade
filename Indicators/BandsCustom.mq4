@@ -107,7 +107,6 @@ int OnCalculate(
     const double &low[], const double &close[], const long &tick_volume[], const long &volume[], const int &spread[]
 )
 {
-    Print("debug:01");
     int i, pos;
     //---
     if (rates_total <= InpBandsPeriod || InpBandsPeriod <= 0) return (0);
@@ -133,7 +132,7 @@ int OnCalculate(
             ExtLowerBuffer3[i] = EMPTY_VALUE;
         }
     }
-    Print("debug:02");
+
     //--- starting calculation
     if (prev_calculated > 1)
         pos = prev_calculated - 1;
@@ -155,7 +154,7 @@ int OnCalculate(
         ExtLowerBuffer2[i] = ExtMovingBuffer[i] - InpBandsDeviations2 * ExtStdDevBuffer[i];
         ExtLowerBuffer3[i] = ExtMovingBuffer[i] - InpBandsDeviations3 * ExtStdDevBuffer[i];
     }
-    Print("debug:03");
+
     //---- OnCalculate done. Return new prev_calculated.
     return (rates_total);
 }
