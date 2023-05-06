@@ -35,8 +35,8 @@ class MovingAverage3Line {
     };
     // ~MovingAverage3Line();
     double shortValue() { return _short; };
-    double middleValue() { return _short; };
-    double longValue() { return _short; };
+    double middleValue() { return _middle; };
+    double longValue() { return _long; };
 
     bool IsStage1() { return _short > _middle && _short > _long && _middle > _long; }; // 短期>中期>長期
     bool IsStage2() { return _short < _middle && _short > _long && _middle > _long; }; // 中期>短期>長期
@@ -44,10 +44,10 @@ class MovingAverage3Line {
     bool IsStage4() { return _short < _middle && _short < _long && _middle < _long; }; // 長期>中期>短期
     bool IsStage5() { return _short > _middle && _short < _long && _middle < _long; }; // 長期>短期>中期
     bool IsStage6() { return _short > _middle && _short > _long && _middle < _long; }; // 短期>長期>中期
-    bool IsUpTorrend() { return IsStage6() || IsStage1() || IsStage2(); };
-    bool IsDownTorrend() { return IsStage3() || IsStage4() || IsStage5(); };
-    bool IsBuyEntry() { return IsStage6(); };
+    bool IsUpTorrend() { return IsStage6() || IsStage1(); };
+    bool IsDownTorrend() { return IsStage3() || IsStage4(); };
+    bool IsBuyEntry() { return IsStage6() || IsStage1(); };
     bool IsBuyClose() { return IsStage2(); };
-    bool IsSelEntry() { return IsStage3(); };
-    bool IsSelClose() { return IsStage5(); };
+    bool IsSellEntry() { return IsStage3() || IsStage4(); };
+    bool IsSellClose() { return IsStage5(); };
 };
