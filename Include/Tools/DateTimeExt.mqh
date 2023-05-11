@@ -18,15 +18,79 @@
 struct CDateTimeExt : public CDateTime
 {
    private:
+    bool IsSummertimeForBackTest();
+    CDateTimeExt CDateTimeExt::SummertimeStartDate();
+    CDateTimeExt CDateTimeExt::SummertimeEndDate();
     int TimeGmtOffsetOfMtSrv();
 
    public:
     datetime ToMtServerDateTime();
     CDateTimeExt ToMtServerStruct();
-    string ToStrings();
+    CDateTimeExt AtEndOfMonth();
+    string ToStrings(string separate);
+    int WeekNumber(datetime date);
     bool Equals(/*MqlDateTime value*/);
     void Debug();
 };
+
+/**
+ * @brief バックテストでの夏時間を判定する。
+ * 3月第2日曜日午前2時〜11月第1日曜日午前2時の期間内の場合はTrueを返す
+ *
+ * @return bool
+ */
+bool CDateTimeExt::IsSummertimeForBackTest()
+{
+    datetime start_date = CDateTimeExt::SummertimeStartDate().DateTime();
+    datetime end_date = CDateTimeExt::SummertimeEndDate().DateTime();
+
+    return this.DateTime() >= start_date && this.DateTime() <= end_date ? true : false;
+}
+
+/**
+ * @brief ローカル日時の年のサマータイム開始日時を返す
+ *
+ * @return CDateTimeExt
+ */
+CDateTimeExt CDateTimeExt::SummertimeStartDate()
+{
+    CDateTimeExt start_date;
+    TimeToStruct(TimeLocal(), start_date);
+    start_date.Mon(3);
+    start_date.Day(1);
+
+    int start_day_of_week = TimeDayOfWeek(start_date.DateTime());
+
+    int start_day = (start_day_of_week == 0) ? 8 : 6 - start_day_of_week + 8;
+
+    start_date.DayInc(start_day);
+    start_date.Hour(2);
+    start_date.Min(0);
+    start_date.Sec(0);
+    return start_date;
+}
+
+/**
+ * @brief ローカル日時の年のサマータイム終了日時を返す
+ *
+ * @return CDateTimeExt
+ */
+CDateTimeExt CDateTimeExt::SummertimeEndDate()
+{
+    CDateTimeExt end_date;
+    TimeToStruct(TimeLocal(), end_date);
+    end_date.Mon(11);
+    end_date.Day(1);
+    int end_day_of_week = TimeDayOfWeek(end_date.DateTime());
+
+    int end_day = (end_day_of_week == 0) ? 1 : 6 - end_day_of_week + 1;
+
+    end_date.DayInc(end_day);
+    end_date.Hour(2);
+    end_date.Min(0);
+    end_date.Sec(0);
+    return end_date;
+}
 
 /**
  * @brief MT4サーバーとローカルPCのシステム時刻のオフセット値を取得する
@@ -40,8 +104,8 @@ int CDateTimeExt::TimeGmtOffsetOfMtSrv()
     int sec_of_hour = 60 * 60;
     int deviation;
     if (IsTesting()) {
-        // TODO strategy testでサマータイムの判定が常に冬時間(0)が返されてしまう
-        deviation = TimeDaylightSavings() == 0 ? gmt2 : gmt3;
+        // strategy testではサマータイムの判定が常に冬時間(0)が返されてしまう
+        deviation = IsSummertimeForBackTest() ? gmt3 : gmt2;
     }
     else {
         // サーバー時刻とローカル時刻で数秒ずれてしまうため時間単位に戻してから丸めて修正
@@ -50,6 +114,38 @@ int CDateTimeExt::TimeGmtOffsetOfMtSrv()
     }
 
     return deviation * sec_of_hour;
+}
+
+/**
+ * @brief 指定した日時の週番号を取得する
+ *
+ * @param date
+ * @return int
+ */
+int CDateTimeExt::WeekNumber(datetime date)
+{
+    CDateTimeExt startDate;
+    startDate.Date(date);
+    startDate.Day(1);
+    startDate.Hour(0);
+    startDate.Min(0);
+    startDate.Sec(0);
+    int startOfWeek = TimeDayOfWeek(startDate.DateTime());
+
+    int dayOfWeek = TimeDayOfWeek(date);
+    int daysInFirstWeek = 7 - dayOfWeek + startOfWeek;
+    int daysPassed = TimeDay(date) - 1;
+    int daysInMonth = startDate.DaysInMonth();
+    int weeksInMonth = (int)MathFloor((daysInMonth - daysInFirstWeek) / 7) + 1;
+    int weekOfMonth = 0;
+
+    weekOfMonth = (daysPassed < daysInFirstWeek) ? 1 : (int)MathFloor((daysPassed - daysInFirstWeek) / 7) + 2;
+
+    if (weekOfMonth > weeksInMonth) {
+        weekOfMonth = weeksInMonth;
+    }
+
+    return weekOfMonth;
 }
 
 /**
@@ -72,11 +168,26 @@ CDateTimeExt CDateTimeExt::ToMtServerStruct()
 }
 
 /**
- * @brief
+ * @brief 月末日を取得する
  *
- * @return string
+ * @return CDateTimeExt
  */
-// string ToStrings() {}
+CDateTimeExt CDateTimeExt::AtEndOfMonth()
+{
+    Day(DaysInMonth());
+    DateTime(this);
+
+    if (day_of_week == SATURDAY) DayDec(1);
+    if (day_of_week == SUNDAY) DayDec(2);
+
+    return this;
+}
+
+string CDateTimeExt::ToStrings(string separate = "/")
+{
+    return (string)this.year + separate + (string)this.mon + separate + (string)this.day + " " + (string)this.hour + ":" +
+           (string)this.min + ":" + (string)this.sec;
+};
 
 /**
  * @brief 日付を比較する
@@ -86,9 +197,4 @@ CDateTimeExt CDateTimeExt::ToMtServerStruct()
 // bool LessThan(/*MqlDateTime value*/) {}
 // bool GreaterThan(/*MqlDateTime value*/) {}
 
-void CDateTimeExt::Debug()
-{
-    Print(
-        "Debug CDate |" + (string)year + "/" + (string)mon + "/" + (string)day + " " + (string)hour + ":" + (string)min + ":" + (string)sec
-    );
-}
+void CDateTimeExt::Debug() { Print("Debug CDateTimeExt |" + (string)ToStrings("-")); }
