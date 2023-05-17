@@ -35,7 +35,7 @@ void InitStrToTimeframeMap()
 }
 
 string currencies[];
-input string currency_pairs = "USDJPY,EURUSD,GBPUSD,AUDUSD,USDCAD,USDCNH,USDCHF,EURGBP"; // 表示通貨ペア(カンマ区切り)
+input string I_CURRENCY_PAIRS = "USDJPY,EURUSD,GBPUSD,AUDUSD,USDCAD,USDCNH,USDCHF,EURGBP"; // 表示通貨ペア(カンマ区切り)
 
 static const double VERSION = 0.1;
 static const string TIMESTAMP = (string)TimeCurrent();
@@ -111,14 +111,11 @@ class MuzunaiSignal : public TrendSignal {
 //+------------------------------------------------------------------+
 int OnInit()
 {
-    int count = StringSplit(currency_pairs, ',', currencies);
+    int count = StringSplit(I_CURRENCY_PAIRS, ',', currencies);
     for (int i = 0; i < count; i++) {
         double result = MarketInfo(currencies[i], MODE_TRADEALLOWED);
         if (result == 0) {
-            Print(
-                "|入力値エラー|currency_pairsに、トレードが許可されていない通貨ペア[" + currencies[i] +
-                "]が入力されたため、処理を中断しました。|"
-            );
+            Print("|入力値エラー|I_CURRENCY_PAIRS[" + currencies[i] + "]が入力されたため、処理を中断しました。|");
             return (INIT_PARAMETERS_INCORRECT);
         }
     }
