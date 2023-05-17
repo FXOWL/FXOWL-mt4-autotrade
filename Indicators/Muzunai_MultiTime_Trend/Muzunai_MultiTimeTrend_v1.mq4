@@ -10,16 +10,46 @@
  */
 #property copyright "2023_05, FXOWL."
 #property link "https://github.com/FXOWL/mt4-autotrade"
-#property version "1.00"
+#property version "1.0"
 #property strict
 
 #include <Generic/HashMap.mqh>
 
-// #property indicator_separate_window
 #property indicator_chart_window
 
+static const double VERSION = 1.0;
+static const string TIMESTAMP = (string)TimeCurrent();
+static const string INDICATOR_BASENAME = "Muzunai";
+static const string INDICATOR_NAME =
+    INDICATOR_BASENAME + "_Ver" + (string)VERSION + " - id" + (string)WindowsTotal() + StringSubstr(TIMESTAMP, StringLen(TIMESTAMP) - 1);
+
+/** ユーザー設定項目 **************************************************************************************************/
+// トレンドを確認する通貨ペアを入力する
+input string I_CURRENCY_PAIRS = "USDJPY,EURUSD,GBPUSD,AUDUSD,USDCAD,USDCNH,USDCHF,EURGBP"; // 表示通貨ペア(カンマ区切り)
+string currency_pairs[]; // スプレッドしたI_CURRENCY_PAIRSの通貨ペアを格納する
+
+/** 表示の基本設定 **************************************************************************************************/
+// トレンドを表示する時間軸の項目名
 string periodStrings[] = {"M1", "M5", "M15", "M30", "H1", "H4", "D1", "W1", "MN1"};
 // string periodStrings[] = {"M5", "M15", "H1", "H4", "D1"};
+// トレンドテーブル
+static const string COLUMN_BASENAME = "Col_";
+static const int CORNER = 0; // 画面の表示位置 0=左上 1=右上 2=左下 3=右下
+static const int HORIZONTAL_HEADER_DISTANCE = 70; // 一列目の水平方向の幅
+static const int HORIZONTAL_DISTANCE = 20; // セルの水平方向の幅
+static const int VERTICAL_DISTANCE = 20; // セルの垂直方向の幅
+
+// 表示文字
+static const string FONT_DEFAULT = "Arial";
+static const int FONT_SIZE = 8;
+
+// シンボル表示
+static const string FONT_DECORATION_SYMBOL = "Wingdings 3"; // アローの表示で使用する装飾記号
+static const int SYMBOLCODE_ARROW_UP = 219; // 「Wingdings 3」では163,199,219のいずれかを使用する
+static const int SYMBOLCODE_ARROW_DOWN = 220; // 「Wingdings 3」では164,200,220のいずれかを使用する
+static const int SYMBOLCODE_NO_SIGNAL = 218;
+static const int SYMBOL_SIZE = 10;
+
 CHashMap<string, ENUM_TIMEFRAMES> str_timeframe_map;
 void InitStrToTimeframeMap()
 {
@@ -33,28 +63,6 @@ void InitStrToTimeframeMap()
     str_timeframe_map.Add("W1", PERIOD_W1);
     str_timeframe_map.Add("MN1", PERIOD_MN1);
 }
-
-string currency_pairs[];
-input string I_CURRENCY_PAIRS = "USDJPY,EURUSD,GBPUSD,AUDUSD,USDCAD,USDCNH,USDCHF,EURGBP"; // 表示通貨ペア(カンマ区切り)
-
-static const double VERSION = 0.1;
-static const string TIMESTAMP = (string)TimeCurrent();
-static const string INDICATOR_BASENAME = "Muzunai";
-static const string INDICATOR_NAME =
-    INDICATOR_BASENAME + "_Ver" + (string)VERSION + " - id" + (string)WindowsTotal() + StringSubstr(TIMESTAMP, StringLen(TIMESTAMP) - 1);
-
-// トレンド一覧表基本設定
-static const string col_header_basename = "Col_Header";
-static const string field_header_basename = "field_Header";
-static const int CORNER = 0; // 画面の表示位置 0=左上 1=右上 2=左下 3=右下
-static const int VERTICAL_DISTANCE = 20;
-static const int HORIZONTAL_HEADER_DISTANCE = 70; // 一列目の水平幅
-static const int HORIZONTAL_DISTANCE = 20;
-static const int SYMBOLCODE_ARROW_UP = 219; // 「Wingdings 3」では163,199,219のいずれかを使用する
-static const int SYMBOLCODE_ARROW_DOWN = 220; // 「Wingdings 3」では164,200,220のいずれかを使用する
-static const int SYMBOLCODE_NO_SIGNAL = 218;
-static const int FONT_SIZE = 8;
-static const int SYMBOL_SIZE = 10;
 
 /**
  * @brief マップのキーを作成する
@@ -83,32 +91,34 @@ class MuzunaiSignal : public TrendSignal {
     {
         _close = iClose(symbol, period, 0);
         _symbol = symbol;
-        _3sigma_upper = iBands(symbol, period, 20, 3, 0, PRICE_CLOSE, MODE_UPPER, 0);
+        // _3sigma_upper = iBands(symbol, period, 20, 3, 0, PRICE_CLOSE, MODE_UPPER, 0);
         _2sigma_upper = iBands(symbol, period, 20, 2, 0, PRICE_CLOSE, MODE_UPPER, 0);
         _1sigma_upper = iBands(symbol, period, 20, 1, 0, PRICE_CLOSE, MODE_UPPER, 0);
         _middle = iBands(symbol, period, 20, 1, 0, PRICE_CLOSE, MODE_MAIN, 0);
         _1sigma_lower = iBands(symbol, period, 20, 1, 0, PRICE_CLOSE, MODE_LOWER, 0);
         _2sigma_lower = iBands(symbol, period, 20, 2, 0, PRICE_CLOSE, MODE_LOWER, 0);
-        _3sigma_lower = iBands(symbol, period, 20, 3, 0, PRICE_CLOSE, MODE_LOWER, 0);
+        // _3sigma_lower = iBands(symbol, period, 20, 3, 0, PRICE_CLOSE, MODE_LOWER, 0);
     };
     // ~MuzunaiSignal(){};
     // 終値が1σ超過の場合は上昇トレンドと判定する
     bool IsUpTrend() { return _close > _1sigma_upper; }
+
     // 終値が-1σ未満の場合は下降トレンドと判定する
     bool IsDownTrend() { return _close < _1sigma_lower; }
+
     // 　終値が0σ超過、且つ、2σ未満の場合買い(下位足で使用すること)
     bool IsBuyEntry() { return _close < _2sigma_upper && _close > _middle; };
+
     // 　終値が0σ未満、且つ、-2σ超過の場合売り(下位足で使用すること)
     bool IsSellEntry() { return _close > _2sigma_lower && _close < _middle; };
+
     // 終値が1σ未満で買いポジションをクローズ
     bool IsBuyClose() { return _close < _1sigma_upper; };
+
     // 終値が-1σ以上で売りポジションをクローズ
     bool IsSellClose() { return _close > _1sigma_lower; };
 };
 
-//+------------------------------------------------------------------+
-//| Custom indicator initialization function                         |
-//+------------------------------------------------------------------+
 int OnInit()
 {
     int count = StringSplit(I_CURRENCY_PAIRS, ',', currency_pairs);
@@ -127,12 +137,12 @@ int OnInit()
 
     // ヘッダー行を作成
     for (int x = 0; x < ArraySize(periodStrings); x++) {
-        string header_name = "Col_Header" + (string)x;
+        string header_name = COLUMN_BASENAME + (string)x;
         if (ObjectCreate(header_name, OBJ_LABEL, windex, 0, 0)) {
             ObjectSet(header_name, OBJPROP_XDISTANCE, (HORIZONTAL_DISTANCE * x) + HORIZONTAL_HEADER_DISTANCE); // 横軸
             ObjectSet(header_name, OBJPROP_YDISTANCE, VERTICAL_DISTANCE); // 縦軸
             ObjectSet(header_name, OBJPROP_CORNER, CORNER); // オブジェクトの画面表示位置
-            ObjectSetText(header_name, periodStrings[x], FONT_SIZE, "Arial", clrRed);
+            ObjectSetText(header_name, periodStrings[x], FONT_SIZE, FONT_DEFAULT, clrRed);
         }
     }
 
@@ -142,7 +152,7 @@ int OnInit()
         if (ObjectCreate(currency_pair, OBJ_LABEL, windex, 0, 0)) {
             ObjectSet(currency_pair, OBJPROP_XDISTANCE, 20);
             ObjectSet(currency_pair, OBJPROP_YDISTANCE, ((y + 1) * VERTICAL_DISTANCE) + VERTICAL_DISTANCE);
-            ObjectSetText(currency_pair, currency_pair, FONT_SIZE, "Arial", clrRed);
+            ObjectSetText(currency_pair, currency_pair, FONT_SIZE, FONT_DEFAULT, clrRed);
         }
         // トレンドシグナルアイコンを初期化する
         for (int x = 0; x < ArraySize(periodStrings); x++) {
@@ -151,20 +161,18 @@ int OnInit()
                 ObjectSet(unique_key, OBJPROP_XDISTANCE, (HORIZONTAL_DISTANCE * x) + HORIZONTAL_HEADER_DISTANCE);
                 ObjectSet(unique_key, OBJPROP_YDISTANCE, ((y + 1) * VERTICAL_DISTANCE) + VERTICAL_DISTANCE);
                 ObjectSet(unique_key, OBJPROP_CORNER, CORNER);
-                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_NO_SIGNAL), SYMBOL_SIZE, "Wingdings 3", clrGray);
+                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_NO_SIGNAL), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, clrGray);
             }
         }
     }
-
     return (INIT_SUCCEEDED);
 }
 
+CHashMap<string, TrendSignal *> curency_signal_map;
 void OnDeinit(const int reason)
 {
-    // ObjectsDeleteAll();
-
     for (int x = 0; x < ArraySize(periodStrings); x++) {
-        string header_name = "Col_Header" + (string)x;
+        string header_name = COLUMN_BASENAME + (string)x;
         ObjectDelete(header_name);
     }
 
@@ -179,8 +187,6 @@ void OnDeinit(const int reason)
     }
     return;
 }
-
-CHashMap<string, TrendSignal *> curency_signal_map;
 
 int OnCalculate(
     const int rates_total, const int prev_calculated, const datetime &time[], const double &open[], const double &high[],
@@ -202,16 +208,15 @@ int OnCalculate(
             curency_signal_map.Add(unique_key, signal);
 
             if (signal.IsUpTrend()) {
-                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_ARROW_UP), SYMBOL_SIZE, "Wingdings 3", clrRed);
+                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_ARROW_UP), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, clrRed);
             }
             else if (signal.IsDownTrend()) {
-                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_ARROW_DOWN), SYMBOL_SIZE, "Wingdings 3", clrBlue);
+                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_ARROW_DOWN), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, clrBlue);
             }
             else {
-                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_NO_SIGNAL), SYMBOL_SIZE, "Wingdings 3", clrGray);
+                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_NO_SIGNAL), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, clrGray);
             }
         }
     }
-
     return (rates_total);
 }
