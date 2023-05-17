@@ -34,7 +34,7 @@ void InitStrToTimeframeMap()
     str_timeframe_map.Add("MN1", PERIOD_MN1);
 }
 
-string currencies[];
+string currency_pairs[];
 input string I_CURRENCY_PAIRS = "USDJPY,EURUSD,GBPUSD,AUDUSD,USDCAD,USDCNH,USDCHF,EURGBP"; // 表示通貨ペア(カンマ区切り)
 
 static const double VERSION = 0.1;
@@ -111,11 +111,11 @@ class MuzunaiSignal : public TrendSignal {
 //+------------------------------------------------------------------+
 int OnInit()
 {
-    int count = StringSplit(I_CURRENCY_PAIRS, ',', currencies);
+    int count = StringSplit(I_CURRENCY_PAIRS, ',', currency_pairs);
     for (int i = 0; i < count; i++) {
-        double result = MarketInfo(currencies[i], MODE_TRADEALLOWED);
+        double result = MarketInfo(currency_pairs[i], MODE_TRADEALLOWED);
         if (result == 0) {
-            Print("|入力値エラー|I_CURRENCY_PAIRS[" + currencies[i] + "]が入力されたため、処理を中断しました。|");
+            Print("|入力値エラー|I_CURRENCY_PAIRS[" + currency_pairs[i] + "]が入力されたため、処理を中断しました。|");
             return (INIT_PARAMETERS_INCORRECT);
         }
     }
@@ -136,9 +136,9 @@ int OnInit()
         }
     }
 
-    for (int y = 0; y < ArraySize(currencies); y++) {
+    for (int y = 0; y < ArraySize(currency_pairs); y++) {
         // ヘッダー列を作成
-        string currency_pair = currencies[y];
+        string currency_pair = currency_pairs[y];
         if (ObjectCreate(currency_pair, OBJ_LABEL, windex, 0, 0)) {
             ObjectSet(currency_pair, OBJPROP_XDISTANCE, 20);
             ObjectSet(currency_pair, OBJPROP_YDISTANCE, ((y + 1) * VERTICAL_DISTANCE) + VERTICAL_DISTANCE);
@@ -168,8 +168,8 @@ void OnDeinit(const int reason)
         ObjectDelete(header_name);
     }
 
-    for (int y = 0; y < ArraySize(currencies); y++) {
-        string currency_pair = currencies[y];
+    for (int y = 0; y < ArraySize(currency_pairs); y++) {
+        string currency_pair = currency_pairs[y];
         ObjectDelete(currency_pair);
         for (int x = 0; x < ArraySize(periodStrings); x++) {
             string unique_key = CreateCurrencySignalMapKey(currency_pair, x);
@@ -190,8 +190,8 @@ int OnCalculate(
     int windex = WindowFind(INDICATOR_NAME);
 
     ENUM_TIMEFRAMES timeframe;
-    for (int currency_no = 0; currency_no < ArraySize(currencies); currency_no++) {
-        string currency_pair = currencies[currency_no];
+    for (int currency_no = 0; currency_no < ArraySize(currency_pairs); currency_no++) {
+        string currency_pair = currency_pairs[currency_no];
         // Print("Debug currency_pair:" + currency_pair);
         for (int period_num = 0; period_num < ArraySize(periodStrings); period_num++) {
             str_timeframe_map.TryGetValue(periodStrings[period_num], timeframe);
