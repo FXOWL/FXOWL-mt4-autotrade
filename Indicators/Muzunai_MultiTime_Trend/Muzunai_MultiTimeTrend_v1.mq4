@@ -133,16 +133,28 @@ class MuzunaiSignal : public TrendSignal {
     bool IsSellClose() { return _close > _1sigma_lower; };
 };
 
-int OnInit()
+/**
+ * @brief 入力値を検証する
+ *
+ * @return true
+ * @return false
+ */
+bool InputValidation()
 {
     int count = StringSplit(I_CURRENCY_PAIRS, ',', currency_pairs);
     for (int i = 0; i < count; i++) {
         double result = MarketInfo(currency_pairs[i], MODE_TRADEALLOWED);
         if (result == 0) {
             Print("|入力値エラー|I_CURRENCY_PAIRS[" + currency_pairs[i] + "]が入力されたため、処理を中断しました。|");
-            return (INIT_PARAMETERS_INCORRECT);
+            return false;
         }
     }
+    return true;
+}
+
+int OnInit()
+{
+    if (InputValidation() == false) return (INIT_PARAMETERS_INCORRECT);
 
     InitStrToTimeframeMap();
     IndicatorShortName(INDICATOR_NAME);
