@@ -28,7 +28,6 @@ struct CDateTimeExt : public CDateTime
     CDateTimeExt ToMtServerStruct();
     CDateTimeExt AtEndOfMonth();
     string ToStrings(string separate);
-    int WeekNumber(datetime date);
     bool Equals(/*MqlDateTime value*/);
     void Debug();
 };
@@ -114,38 +113,6 @@ int CDateTimeExt::TimeGmtOffsetOfMtSrv()
     }
 
     return deviation * sec_of_hour;
-}
-
-/**
- * @brief 指定した日時の週番号を取得する
- *
- * @param date
- * @return int
- */
-int CDateTimeExt::WeekNumber(datetime date)
-{
-    CDateTimeExt startDate;
-    startDate.Date(date);
-    startDate.Day(1);
-    startDate.Hour(0);
-    startDate.Min(0);
-    startDate.Sec(0);
-    int startOfWeek = TimeDayOfWeek(startDate.DateTime());
-
-    int dayOfWeek = TimeDayOfWeek(date);
-    int daysInFirstWeek = 7 - dayOfWeek + startOfWeek;
-    int daysPassed = TimeDay(date) - 1;
-    int daysInMonth = startDate.DaysInMonth();
-    int weeksInMonth = (int)MathFloor((daysInMonth - daysInFirstWeek) / 7) + 1;
-    int weekOfMonth = 0;
-
-    weekOfMonth = (daysPassed < daysInFirstWeek) ? 1 : (int)MathFloor((daysPassed - daysInFirstWeek) / 7) + 2;
-
-    if (weekOfMonth > weeksInMonth) {
-        weekOfMonth = weeksInMonth;
-    }
-
-    return weekOfMonth;
 }
 
 /**
