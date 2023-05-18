@@ -9,7 +9,7 @@
 
 ## 入力パラメータ
 
-![入力パラメータ](Images/muzunai_multitime_trend02.png)
+![入力パラメータ](Images/muzunai_multitime_trend_v1.1.png)
 
 * 表示通貨ペア  
     MT4の通貨ペアの表記をカンマ区切りで入力する。  
