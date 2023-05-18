@@ -2,7 +2,7 @@
  * @file Muzunai_MultiTimeTrend_v1.mqh
  * @author fxowl (javajava0708@gmail.com)
  * @brief
- * @version 1.0
+ * @version 1.1
  * @date 2023-05-15
  *
  * @copyright Copyright (c) 2023
@@ -10,31 +10,45 @@
  */
 #property copyright "2023_05, FXOWL."
 #property link "https://github.com/FXOWL/mt4-autotrade"
-#property version "1.0"
+#property version "1.1"
 #property strict
 
 #include <Generic/HashMap.mqh>
 
 #property indicator_chart_window
 
-static const double VERSION = 1.0;
+static const double VERSION = 1.1;
 static const string TIMESTAMP = (string)TimeCurrent();
 static const string INDICATOR_BASENAME = "Muzunai";
 static const string INDICATOR_NAME =
     INDICATOR_BASENAME + "_Ver" + (string)VERSION + " - id" + (string)WindowsTotal() + StringSubstr(TIMESTAMP, StringLen(TIMESTAMP) - 1);
 
 /** ユーザー設定項目 **************************************************************************************************/
+input string BASE_SETTING_GROUP = ""; // ↓** 基本設定項目 **↓
 // トレンドを確認する通貨ペアを入力する
 input string I_CURRENCY_PAIRS = "USDJPY,EURUSD,GBPUSD,AUDUSD,USDCAD,USDCNH,USDCHF,EURGBP"; // 表示通貨ペア(カンマ区切り)
 string currency_pairs[]; // スプレッドしたI_CURRENCY_PAIRSの通貨ペアを格納する
 
+input string DISPLAY_SETTING_GROUP = ""; // ↓** 表示設定項目 **↓
+enum MUZUNAI_CORNER
+{
+    LEFT_UPPER = CORNER_LEFT_UPPER, // 左上
+    LEFT_LOWER = CORNER_LEFT_LOWER // 左下
+};
+// メモ 3,4は表示順序が反転するため今は対応しない
+input MUZUNAI_CORNER I_CORNER = CORNER_LEFT_LOWER; // トレンドテーブル表示位置
+input color I_TIMEFRAME_COLOR = clrRed; // 時間軸の文字色
+input color I_CURRENCYPAIR_COLOR = clrGold; // 通貨ペアの文字色
+input color I_ARROW_NORMAL_COLOR = clrGray; // 「↑」シンボルの色
+input color I_ARROW_UP_COLOR = clrRed; // 「→」シンボルの色
+input color I_ARROW_DOWN_COLOR = clrBlue; // 「↓」シンボルの色
+
 /** 表示の基本設定 **************************************************************************************************/
 // トレンドを表示する時間軸の項目名
-string periodStrings[] = {"M1", "M5", "M15", "M30", "H1", "H4", "D1", "W1", "MN1"};
+string periodStrings[9] = {"M1", "M5", "M15", "M30", "H1", "H4", "D1", "W1", "MN1"};
 // string periodStrings[] = {"M5", "M15", "H1", "H4", "D1"};
 // トレンドテーブル
 static const string COLUMN_BASENAME = "Col_";
-static const int CORNER = 0; // 画面の表示位置 0=左上 1=右上 2=左下 3=右下
 static const int HORIZONTAL_HEADER_DISTANCE = 70; // 一列目の水平方向の幅
 static const int HORIZONTAL_DISTANCE = 20; // セルの水平方向の幅
 static const int VERTICAL_DISTANCE = 20; // セルの垂直方向の幅
@@ -141,8 +155,8 @@ int OnInit()
         if (ObjectCreate(header_name, OBJ_LABEL, windex, 0, 0)) {
             ObjectSet(header_name, OBJPROP_XDISTANCE, (HORIZONTAL_DISTANCE * x) + HORIZONTAL_HEADER_DISTANCE); // 横軸
             ObjectSet(header_name, OBJPROP_YDISTANCE, VERTICAL_DISTANCE); // 縦軸
-            ObjectSet(header_name, OBJPROP_CORNER, CORNER); // オブジェクトの画面表示位置
-            ObjectSetText(header_name, periodStrings[x], FONT_SIZE, FONT_DEFAULT, clrRed);
+            ObjectSet(header_name, OBJPROP_CORNER, I_CORNER); // オブジェクトの画面表示位置
+            ObjectSetText(header_name, periodStrings[x], FONT_SIZE, FONT_DEFAULT, I_TIMEFRAME_COLOR);
         }
     }
 
@@ -152,7 +166,8 @@ int OnInit()
         if (ObjectCreate(currency_pair, OBJ_LABEL, windex, 0, 0)) {
             ObjectSet(currency_pair, OBJPROP_XDISTANCE, 20);
             ObjectSet(currency_pair, OBJPROP_YDISTANCE, ((y + 1) * VERTICAL_DISTANCE) + VERTICAL_DISTANCE);
-            ObjectSetText(currency_pair, currency_pair, FONT_SIZE, FONT_DEFAULT, clrRed);
+            ObjectSet(currency_pair, OBJPROP_CORNER, I_CORNER);
+            ObjectSetText(currency_pair, currency_pair, FONT_SIZE, FONT_DEFAULT, I_CURRENCYPAIR_COLOR);
         }
         // トレンドシグナルアイコンを初期化する
         for (int x = 0; x < ArraySize(periodStrings); x++) {
@@ -160,7 +175,7 @@ int OnInit()
             if (ObjectCreate(unique_key, OBJ_LABEL, windex, 0, 0)) {
                 ObjectSet(unique_key, OBJPROP_XDISTANCE, (HORIZONTAL_DISTANCE * x) + HORIZONTAL_HEADER_DISTANCE);
                 ObjectSet(unique_key, OBJPROP_YDISTANCE, ((y + 1) * VERTICAL_DISTANCE) + VERTICAL_DISTANCE);
-                ObjectSet(unique_key, OBJPROP_CORNER, CORNER);
+                ObjectSet(unique_key, OBJPROP_CORNER, I_CORNER);
                 ObjectSetText(unique_key, CharToStr(SYMBOLCODE_NO_SIGNAL), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, clrGray);
             }
         }
@@ -208,13 +223,13 @@ int OnCalculate(
             curency_signal_map.Add(unique_key, signal);
 
             if (signal.IsUpTrend()) {
-                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_ARROW_UP), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, clrRed);
+                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_ARROW_UP), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, I_ARROW_UP_COLOR);
             }
             else if (signal.IsDownTrend()) {
-                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_ARROW_DOWN), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, clrBlue);
+                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_ARROW_DOWN), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, I_ARROW_DOWN_COLOR);
             }
             else {
-                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_NO_SIGNAL), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, clrGray);
+                ObjectSetText(unique_key, CharToStr(SYMBOLCODE_NO_SIGNAL), SYMBOL_SIZE, FONT_DECORATION_SYMBOL, I_ARROW_NORMAL_COLOR);
             }
         }
     }
