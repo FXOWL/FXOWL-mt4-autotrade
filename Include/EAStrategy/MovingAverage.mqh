@@ -44,8 +44,8 @@ class MovingAverage3Line {
     bool IsStage4() { return _short < _middle && _short < _long && _middle < _long; }; // 長期>中期>短期
     bool IsStage5() { return _short > _middle && _short < _long && _middle < _long; }; // 長期>短期>中期
     bool IsStage6() { return _short > _middle && _short > _long && _middle < _long; }; // 短期>長期>中期
-    bool IsUpTorrend() { return IsStage6() || IsStage1(); };
-    bool IsDownTorrend() { return IsStage3() || IsStage4(); };
+    bool IsUpTrend() { return IsStage6() || IsStage1(); };
+    bool IsDownTrend() { return IsStage3() || IsStage4(); };
     bool IsBuyEntry() { return IsStage6() || IsStage1(); };
     bool IsBuyClose() { return IsStage2(); };
     bool IsSellEntry() { return IsStage3() || IsStage4(); };
