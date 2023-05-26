@@ -26,7 +26,7 @@ static const string INDICATOR_NAME =
 /** ユーザー設定項目 **************************************************************************************************/
 input string BASE_SETTING_GROUP = ""; // ↓** 基本設定項目 **↓
 // トレンドを確認する通貨ペアを入力する
-input string I_CURRENCY_PAIRS = "USDJPY,EURUSD,GBPUSD,AUDUSD,USDCAD,USDCNH,USDCHF,EURGBP"; // 表示通貨ペア(カンマ区切り)
+input string I_CURRENCY_PAIRS = "USDJPY,EURUSD,GBPUSD,AUDUSD,USDCAD,USDCHF,EURGBP,XAUUSD"; // 表示通貨ペア(カンマ区切り)
 string currency_pairs[]; // スプレッドしたI_CURRENCY_PAIRSの通貨ペアを格納する
 
 input string DISPLAY_SETTING_GROUP = ""; // ↓** 表示設定項目 **↓
@@ -36,17 +36,17 @@ enum MUZUNAI_CORNER
     LEFT_LOWER = CORNER_LEFT_LOWER // 左下
 };
 // メモ 3,4は表示順序が反転するため今は対応しない
-input MUZUNAI_CORNER I_CORNER = CORNER_LEFT_LOWER; // トレンドテーブル表示位置
+input MUZUNAI_CORNER I_CORNER = CORNER_LEFT_UPPER; // トレンドテーブル表示位置
 input color I_TIMEFRAME_COLOR = clrRed; // 時間軸の文字色
 input color I_CURRENCYPAIR_COLOR = clrGold; // 通貨ペアの文字色
-input color I_ARROW_NORMAL_COLOR = clrGray; // 「↑」シンボルの色
-input color I_ARROW_UP_COLOR = clrRed; // 「→」シンボルの色
+input color I_ARROW_NORMAL_COLOR = clrGray; // 「→」シンボルの色
+input color I_ARROW_UP_COLOR = clrRed; // 「↑」シンボルの色
 input color I_ARROW_DOWN_COLOR = clrBlue; // 「↓」シンボルの色
 
 /** 表示の基本設定 **************************************************************************************************/
 // トレンドを表示する時間軸の項目名
 string periodStrings[9] = {"M1", "M5", "M15", "M30", "H1", "H4", "D1", "W1", "MN1"};
-// string periodStrings[] = {"M5", "M15", "H1", "H4", "D1"};
+
 // トレンドテーブル
 static const string COLUMN_BASENAME = "Col_";
 static const int HORIZONTAL_HEADER_DISTANCE = 70; // 一列目の水平方向の幅
