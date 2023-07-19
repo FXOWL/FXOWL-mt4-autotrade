@@ -1,4 +1,4 @@
-
+#include <TradeForMT4/AccountInfo.mqh>
 /**
  * @brief ロットクラス
  *
@@ -17,7 +17,9 @@ class Lot {
         m_currency_unit = 1000.0;
         if (!Valid(value)) {
             // SetUserError(ERR_USER_ERROR_FIRST);
-            ErrorLog(ERR_USER_ERROR_FIRST, "Lotクラスのコンストラクタの引数に不正な値が代入されました。");
+            string err_type = "MQL error";
+            string message = "Lotクラスのコンストラクタの引数に不正な値が代入されました。";
+            printf("&s [%s code:%d]%s", message, err_type, ERR_USER_ERROR_FIRST, ErrorDescription(ERR_USER_ERROR_FIRST));
             return;
         }
         m_value = value;
