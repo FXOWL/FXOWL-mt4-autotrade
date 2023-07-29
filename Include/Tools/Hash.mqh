@@ -6,10 +6,10 @@
 
 /*
    This is losely ported from a C version I have which was in turn modified from hashtable.c by Christopher Clark.
-Copyright (C) 2014, Andrew Lord (NICKNAME=lordy) <forex@NICKNAME.org.uk>
-Copyright (C) 2002, 2004 Christopher Clark <firstname.lastname@cl.cam.ac.uk>
+ Copyright (C) 2014, Andrew Lord (NICKNAME=lordy) <forex@NICKNAME.org.uk>
+ Copyright (C) 2002, 2004 Christopher Clark <firstname.lastname@cl.cam.ac.uk>
 
-2014/02/21 - Readded PrimeNumber sizes and auto rehashing when load factor hit.
+ 2014/02/21 - Readded PrimeNumber sizes and auto rehashing when load factor hit.
 */
 
 /// Any value stored in a Hash must be a subclass of HashValue
@@ -21,12 +21,16 @@ class HashEntry {
     string _key;
     HashValue *_val;
     HashEntry *_next;
+    HashEntry *_ordered_prev;
+    HashEntry *_ordered_next;
 
     HashEntry()
     {
         _key = NULL;
         _val = NULL;
         _next = NULL;
+        _ordered_prev = NULL;
+        _ordered_next = NULL;
     }
 
     HashEntry(string key, HashValue *val)
@@ -34,6 +38,8 @@ class HashEntry {
         _key = key;
         _val = val;
         _next = NULL;
+        _ordered_prev = NULL;
+        _ordered_next = NULL;
     }
 
     ~HashEntry() {}
@@ -157,6 +163,9 @@ class Hash : public HashValue {
     /// for the key and return the val.
     HashEntry *_buckets[];
 
+    HashEntry *_ordered_first;
+    HashEntry *_ordered_last;
+
     /// If true the hash will free(delete) values as they are removed, or at cleanup.
     bool _adoptValues;
 
@@ -165,6 +174,8 @@ class Hash : public HashValue {
 
     void init(uint size, bool adoptValues)
     {
+        _ordered_first = NULL;
+        _ordered_last = NULL;
         _hashSlots = 0;
         _hashEntryCount = 0;
         clearError();
@@ -190,23 +201,74 @@ class Hash : public HashValue {
     /// Primes that approx double in size, used for hash table sizes to avoid gcd causing bunching
     static uint _primes[];
 
-    /// After reviewing quite a few hash functions I settled on the one below.
-    /// http://www.cse.yorku.ca/~oz/hash.html
-    /// this is the bottleneck function. Shame mql hash no default hash method for objects.
-    uint hash(string s)
-    {
-        uchar c[];
-        uint h = 0;
+    uint hash32(string s)
+    { // FNV-1a 32 hash algorithm
+        ushort c[];
+        uint hval = 0x811c9dc5;
+        const uint FNV_32_PRIME = 0x01000193;
 
         if (s != NULL) {
-            h = 5381;
-            int n = StringToCharArray(s, c);
-            for (int i = 0; i < n; i++) {
-                h = ((h << 5) + h) + c[i];
+            int n = StringToShortArray(s, c);
+            // n is one bigger than the length of s because it includes the terminating zero
+            // so do not execute the following loop for this terminating zero.
+            for (int i = 0; i < n - 1; i++) {
+                ushort code = c[i];
+                if (code < 128) {
+                    hval ^= code;
+                }
+                else if (code < 2048) {
+                    hval ^= 192 + (code >> 6);
+                    hval *= FNV_32_PRIME;
+                    hval ^= 128 + (code & 63);
+                }
+                else // code < 65536, because ushort
+                {
+                    hval ^= 224 + (code >> 12);
+                    hval *= FNV_32_PRIME;
+                    hval ^= 128 + ((code >> 6) & 63);
+                    hval *= FNV_32_PRIME;
+                    hval ^= 128 + (code & 63);
+                }
+                hval *= FNV_32_PRIME;
             }
         }
-        return h % _hashSlots;
+        return hval % _hashSlots;
     }
+
+    uint hash64(string s)
+    { // FNV-1a 64 hash algorithm
+        ushort c[];
+        ulong hval = 0xCBF29CE484222325;
+        const ulong FNV_64_PRIME = 0x00000100000001B3;
+
+        if (s != NULL) {
+            int n = StringToShortArray(s, c);
+            // n is one bigger than the length of s because it includes the terminating zero
+            // so do not execute the following loop for this terminating zero.
+            for (int i = 0; i < n - 1; i++) {
+                ushort code = c[i];
+                if (code < 128) {
+                    hval ^= code;
+                }
+                else if (code < 2048) {
+                    hval ^= 192 + (code >> 6);
+                    hval *= FNV_64_PRIME;
+                    hval ^= 128 + (code & 63);
+                }
+                else // code < 65536, because ushort
+                {
+                    hval ^= 224 + (code >> 12);
+                    hval *= FNV_64_PRIME;
+                    hval ^= 128 + ((code >> 6) & 63);
+                    hval *= FNV_64_PRIME;
+                    hval ^= 128 + (code & 63);
+                }
+                hval *= FNV_64_PRIME;
+            }
+        }
+        return (uint)(hval % _hashSlots);
+    }
+
     void clearError() { setError(0, ""); }
     void setError(int e, string m)
     {
@@ -272,7 +334,7 @@ class Hash : public HashValue {
         bool found = false;
 
         // Get the index using the hashcode of the string
-        _foundIndex = hash(keyName);
+        _foundIndex = hash64(keyName);
 
         if (_foundIndex > _hashSlots) {
             setError(1, "hGet: bad hashIndex=" + (string)_foundIndex + " size " + (string)_hashSlots);
@@ -280,6 +342,7 @@ class Hash : public HashValue {
         else {
             // Search the linked list determined by the index.
 
+            _foundPrev = NULL;
             for (HashEntry *e = _buckets[_foundIndex]; e != NULL; e = e._next) {
                 if (e._key == keyName) {
                     _foundEntry = e;
@@ -323,10 +386,11 @@ class Hash : public HashValue {
             setError(4, "unable to resize old copy ");
         }
         else {
+            uint i;
             // Copy old table.
-            for (uint i = 0; i < oldSize; i++) oldTable[i] = _buckets[i];
+            for (i = 0; i < oldSize; i++) oldTable[i] = _buckets[i];
             // Init new entries - not sure if MQL does this anyway
-            for (uint j = 0; j < newSize; j++) _buckets[j] = NULL;
+            for (i = 0; i < newSize; i++) _buckets[i] = NULL;
 
             // Move entries to new slots
             _hashSlots = newSize;
@@ -340,7 +404,7 @@ class Hash : public HashValue {
                 for (HashEntry *e = oldTable[oldHashCode]; e != NULL; e = next) {
                     next = e._next;
 
-                    uint newHashCode = hash(e._key);
+                    uint newHashCode = hash64(e._key);
                     // Insert at head of new list.
                     e._next = _buckets[newHashCode];
                     _buckets[newHashCode] = e;
@@ -441,20 +505,15 @@ class Hash : public HashValue {
     /// @param keyName : key name
     /// @param obj : Value to store
     /// @return the previous value of the key or NULL if there wasnt one
-    HashValue *hPut(string keyName, HashValue *obj)
+    void hPut(string keyName, HashValue *obj)
     {
-        HashValue *ret = NULL;
         clearError();
 
         if (find(keyName)) {
-            // Return revious value
-            ret = _foundEntry._val;
-            /*
             // Replace entry contents
-            if (_adoptValues && _foundEntry._val != NULL && CheckPointer(_foundEntry._val) == POINTER_DYNAMIC ) {
+            if (_adoptValues && _foundEntry._val != NULL && CheckPointer(_foundEntry._val) == POINTER_DYNAMIC) {
                 delete _foundEntry._val;
             }
-            */
             _foundEntry._val = obj;
         }
         else {
@@ -465,50 +524,62 @@ class Hash : public HashValue {
             _buckets[_foundIndex] = e;
             _hashEntryCount++;
 
+            if (NULL == _ordered_last) {
+                _ordered_first = e;
+                _ordered_last = e;
+                e._ordered_prev = NULL;
+                e._ordered_next = NULL;
+            }
+            else {
+                e._ordered_prev = _ordered_last;
+                e._ordered_next = NULL;
+                _ordered_last._ordered_next = e;
+                _ordered_last = e;
+            }
+
             // info((string)_hashEntryCount+" vs. "+(string)_resizeThreshold);
             //  Auto Resize if number of entries hits _resizeThreshold
             if (_hashEntryCount > _resizeThreshold) {
                 rehash(_hashSlots / 2 * 3); // this will snap to the next prime
             }
         }
-        return ret;
     }
     /// Store a string as hash value (HashString)
-    /// @return the previous value of the key or NULL if there wasnt one
-    HashValue *hPutString(string keyName, string s)
+    /// @the previous value of the key or NULL if there wasnt one
+    void hPutString(string keyName, string s)
     {
         HashString *v = new HashString(s);
-        return hPut(keyName, v);
+        hPut(keyName, v);
     }
     /// Store a double as hash value (HashDouble)
-    /// @return the previous value of the key or NULL if there wasnt one
-    HashValue *hPutDouble(string keyName, double d)
+    /// @the previous value of the key or NULL if there wasnt one
+    void hPutDouble(string keyName, double d)
     {
         HashDouble *v = new HashDouble(d);
-        return hPut(keyName, v);
+        hPut(keyName, v);
     }
     /// Store an int as hash value (HashInt)
-    /// @return the previous value of the key or NULL if there wasnt one
-    HashValue *hPutInt(string keyName, int i)
+    /// @the previous value of the key or NULL if there wasnt one
+    void hPutInt(string keyName, int i)
     {
         HashInt *v = new HashInt(i);
-        return hPut(keyName, v);
+        hPut(keyName, v);
     }
 
     /// Store a datetime as hash value (HashLong)
-    /// @return the previous value of the key or NULL if there wasnt one
-    HashValue *hPutLong(string keyName, long i)
+    /// @the previous value of the key or NULL if there wasnt one
+    void hPutLong(string keyName, long i)
     {
         HashLong *v = new HashLong(i);
-        return hPut(keyName, v);
+        hPut(keyName, v);
     }
 
     /// Store a datetime as hash value (HashDatetime)
-    /// @return the previous value of the key or NULL if there wasnt one
-    HashValue *hPutDatetime(string keyName, datetime i)
+    /// @the previous value of the key or NULL if there wasnt one
+    void hPutDatetime(string keyName, datetime i)
     {
         HashDatetime *v = new HashDatetime(i);
-        return hPut(keyName, v);
+        hPut(keyName, v);
     }
 
     /// Delete an entry from the hash.
@@ -528,6 +599,20 @@ class Hash : public HashValue {
                 _buckets[_foundIndex] = next;
             }
 
+            if (NULL == _foundEntry._ordered_prev) {
+                _ordered_first = _foundEntry._ordered_next;
+            }
+            else {
+                _foundEntry._ordered_prev._ordered_next = _foundEntry._ordered_next;
+            }
+
+            if (NULL == _foundEntry._ordered_next) {
+                _ordered_last = _foundEntry._ordered_prev;
+            }
+            else {
+                _foundEntry._ordered_next._ordered_prev = _foundEntry._ordered_prev;
+            }
+
             if (_adoptValues && _foundEntry._val != NULL && CheckPointer(_foundEntry._val) == POINTER_DYNAMIC) {
                 delete _foundEntry._val;
             }
@@ -537,6 +622,9 @@ class Hash : public HashValue {
         }
         return found;
     }
+
+    HashEntry *get_ordered_first() { return _ordered_first; }
+    HashEntry *get_ordered_last() { return _ordered_last; }
 };
 uint Hash::_primes[] = {17,      53,       97,       193,      389,       769,       1543,      3079,      6151,
                         12289,   24593,    49157,    98317,    196613,    393241,    786433,    1572869,   3145739,
@@ -553,35 +641,37 @@ uint Hash::_primes[] = {17,      53,       97,       193,      389,       769,  
 /// </pre>
 class HashLoop {
    private:
-    uint _index;
     HashEntry *_currentEntry;
     Hash *_hash;
 
    public:
     /// Create iterator for a hash - move to first item
-    HashLoop(Hash *h) { setHash(h); }
+    HashLoop(Hash *h, bool reset_to_last_object = false) { setHash(h, reset_to_last_object); }
     ~HashLoop(){};
 
     /// Clear current state and move to first item (if any).
-    void reset()
+    void reset(bool reset_to_last_object = false)
     {
-        _index = 0;
-        _currentEntry = _hash.getEntry(_index);
-
-        // Move to first item
-        if (_currentEntry == NULL) {
-            next();
-        }
+        _currentEntry = reset_to_last_object ? _hash.get_ordered_last() : _hash.get_ordered_first();
     }
 
     /// Change the hash over which to iterate.
-    void setHash(Hash *h)
+    void setHash(Hash *h, bool reset_to_last_object = false)
     {
         _hash = h;
-        reset();
+        reset(reset_to_last_object);
     }
 
-    /// Check if more items.
+    /// Check if current item is valid and so the functions
+    /// key() and val() will not return NULL.
+    bool isValid()
+    {
+        bool ret = (_currentEntry != NULL);
+        // config("hasNext=",ret);
+        return ret;
+    }
+
+    /// hasNext(): same as isValid(), only for compatibility reasons with older versions
     bool hasNext()
     {
         bool ret = (_currentEntry != NULL);
@@ -592,18 +682,17 @@ class HashLoop {
     /// Move to next item.
     void next()
     {
-        // config("next : index = ",_index);
-
         // Advance
         if (_currentEntry != NULL) {
-            _currentEntry = _currentEntry._next;
+            _currentEntry = _currentEntry._ordered_next;
         }
+    }
 
-        // Keep advancing if _currentEntry is null
-        while (_currentEntry == NULL) {
-            _index++;
-            if (_index >= _hash.getSlots()) return;
-            _currentEntry = _hash.getEntry(_index);
+    /// Move to previous item.
+    void prev()
+    {
+        if (_currentEntry != NULL) {
+            _currentEntry = _currentEntry._ordered_prev;
         }
     }
 
