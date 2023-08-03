@@ -49,14 +49,6 @@ struct CDateTimeExt : public CDateTime
     bool IsSaturday() { return TimeDayOfWeek(this.DateTime()) == 6; };
     bool IsGotoday() { return TimeDay(this.DateTime()) % 5 == 0; };
     void Debug();
-    CDateTimeExt DateTime(const datetime value);
-    CDateTimeExt Date(const datetime value);
-    CDateTimeExt Sec(const int value);
-    CDateTimeExt Min(const int value);
-    CDateTimeExt Hour(const int value);
-    CDateTimeExt Day(const int value);
-    CDateTimeExt Mon(const int value);
-    CDateTimeExt Year(const int value);
 };
 
 /**
@@ -226,55 +218,4 @@ bool CDateTimeExt::Between(const datetime start, const datetime end) { return th
 bool CDateTimeExt::Between(const MqlDateTime &start, const MqlDateTime &end)
 {
     return this.Between(StructToTime(start), StructToTime(end));
-}
-
-void CDateTimeExt::Debug() { Print("Debug CDateTimeExt |" + (string)ToStrings("-")); }
-
-/** これより以下はDatetime構造体の関数でメソッドチェーンが出来ないため、構造体を返すようにオーバーライドしている */
-CDateTimeExt CDateTimeExt::DateTime(const datetime value)
-{
-    CDateTime::DateTime(value);
-    return this;
-}
-
-CDateTimeExt CDateTimeExt::Date(const datetime value)
-{
-    CDateTime::Date(value);
-    return this;
-}
-
-CDateTimeExt CDateTimeExt::Sec(const int value)
-{
-    CDateTime::Sec(value);
-    return this;
-}
-
-CDateTimeExt CDateTimeExt::Min(const int value)
-{
-    CDateTime::Min(value);
-    return this;
-}
-
-CDateTimeExt CDateTimeExt::Hour(const int value)
-{
-    CDateTime::Hour(value);
-    return this;
-}
-
-CDateTimeExt CDateTimeExt::Day(const int value)
-{
-    CDateTime::Day(value);
-    return this;
-}
-
-CDateTimeExt CDateTimeExt::Mon(const int value)
-{
-    CDateTime::Mon(value);
-    return this;
-}
-
-CDateTimeExt CDateTimeExt::Year(const int value)
-{
-    CDateTime::Year(value);
-    return this;
 }
