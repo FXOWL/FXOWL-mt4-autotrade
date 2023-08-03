@@ -242,6 +242,7 @@ CDateTimeExt CDateTimeExt::Date(const datetime value)
     CDateTime::Date(value);
     return this;
 }
+
 CDateTimeExt CDateTimeExt::Sec(const int value)
 {
     CDateTime::Sec(value);
@@ -257,5 +258,23 @@ CDateTimeExt CDateTimeExt::Min(const int value)
 CDateTimeExt CDateTimeExt::Hour(const int value)
 {
     CDateTime::Hour(value);
+    return this;
+}
+
+CDateTimeExt CDateTimeExt::Day(const int value)
+{
+    CDateTime::Day(value);
+    return this;
+}
+
+CDateTimeExt CDateTimeExt::Mon(const int value)
+{
+    CDateTime::Mon(value);
+    return this;
+}
+
+CDateTimeExt CDateTimeExt::Year(const int value)
+{
+    CDateTime::Year(value);
     return this;
 }
