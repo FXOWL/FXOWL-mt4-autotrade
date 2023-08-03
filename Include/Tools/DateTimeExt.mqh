@@ -28,8 +28,35 @@ struct CDateTimeExt : public CDateTime
     CDateTimeExt ToMtServerStruct();
     CDateTimeExt AtEndOfMonth();
     string ToStrings(string separate);
-    bool Equals(/*MqlDateTime value*/);
+    bool Eq(const MqlDateTime &value);
+    bool Eq(const datetime value);
+    bool Gt(const MqlDateTime &value);
+    bool Gt(const datetime value);
+    bool Gte(const MqlDateTime &value);
+    bool Gte(const datetime value);
+    bool Lt(const MqlDateTime &value);
+    bool Lt(const datetime value);
+    bool Lte(const MqlDateTime &value);
+    bool Lte(const datetime value);
+    bool Between(const MqlDateTime &start, const MqlDateTime &end);
+    bool Between(const datetime start, const datetime end);
+    bool IsSunday() { return TimeDayOfWeek(this.DateTime()) == 0; };
+    bool IsMonday() { return TimeDayOfWeek(this.DateTime()) == 1; };
+    bool IsTuesday() { return TimeDayOfWeek(this.DateTime()) == 2; };
+    bool IsWednesday() { return TimeDayOfWeek(this.DateTime()) == 3; };
+    bool IsThursday() { return TimeDayOfWeek(this.DateTime()) == 4; };
+    bool IsFriday() { return TimeDayOfWeek(this.DateTime()) == 5; };
+    bool IsSaturday() { return TimeDayOfWeek(this.DateTime()) == 6; };
+    bool IsGotoday() { return TimeDay(this.DateTime()) % 5 == 0; };
     void Debug();
+    CDateTimeExt DateTime(const datetime value);
+    CDateTimeExt Date(const datetime value);
+    CDateTimeExt Sec(const int value);
+    CDateTimeExt Min(const int value);
+    CDateTimeExt Hour(const int value);
+    CDateTimeExt Day(const int value);
+    CDateTimeExt Mon(const int value);
+    CDateTimeExt Year(const int value);
 };
 
 /**
@@ -157,11 +184,78 @@ string CDateTimeExt::ToStrings(string separate = "/")
 };
 
 /**
- * @brief 日付を比較する
+ * @brief value と等しいか
  *
  */
-// bool Equals(/*MqlDateTime value*/) {}
-// bool LessThan(/*MqlDateTime value*/) {}
-// bool GreaterThan(/*MqlDateTime value*/) {}
+bool CDateTimeExt::Eq(const datetime value) { return this.DateTime() == value; }
+bool CDateTimeExt::Eq(const MqlDateTime &value) { return this.Eq(StructToTime(value)); }
+
+/**
+ * @brief value より大きいか？
+ *
+ */
+bool CDateTimeExt::Gt(const datetime value) { return this.DateTime() > value; }
+bool CDateTimeExt::Gt(const MqlDateTime &value) { return this.Gt(StructToTime(value)); }
+
+/**
+ * @brief value 以上か？
+ *
+ */
+bool CDateTimeExt::Gte(const datetime value) { return this.DateTime() >= value; }
+bool CDateTimeExt::Gte(const MqlDateTime &value) { return this.Gte(StructToTime(value)); }
+
+/**
+ * @brief value 未満か？
+ *
+ */
+bool CDateTimeExt::Lt(const datetime value) { return this.DateTime() < value; }
+bool CDateTimeExt::Lt(const MqlDateTime &value) { return this.Lt(StructToTime(value)); }
+
+/**
+ * @brief value 以下か？
+ *
+ */
+bool CDateTimeExt::Lte(const datetime value) { return this.DateTime() <= value; }
+bool CDateTimeExt::Lte(const MqlDateTime &value) { return this.Lte(StructToTime(value)); }
+
+/**
+ * @brief start と end の期間内か？
+ *
+ */
+bool CDateTimeExt::Between(const datetime start, const datetime end) { return this.DateTime() >= start && this.DateTime() <= end; }
+bool CDateTimeExt::Between(const MqlDateTime &start, const MqlDateTime &end)
+{
+    return this.Between(StructToTime(start), StructToTime(end));
+}
 
 void CDateTimeExt::Debug() { Print("Debug CDateTimeExt |" + (string)ToStrings("-")); }
+
+/** これより以下はDatetime構造体の関数でメソッドチェーンが出来ないため、構造体を返すようにオーバーライドしている */
+CDateTimeExt CDateTimeExt::DateTime(const datetime value)
+{
+    CDateTime::DateTime(value);
+    return this;
+}
+
+CDateTimeExt CDateTimeExt::Date(const datetime value)
+{
+    CDateTime::Date(value);
+    return this;
+}
+CDateTimeExt CDateTimeExt::Sec(const int value)
+{
+    CDateTime::Sec(value);
+    return this;
+}
+
+CDateTimeExt CDateTimeExt::Min(const int value)
+{
+    CDateTime::Min(value);
+    return this;
+}
+
+CDateTimeExt CDateTimeExt::Hour(const int value)
+{
+    CDateTime::Hour(value);
+    return this;
+}
