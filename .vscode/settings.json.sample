@@ -9,6 +9,13 @@
     "files.associations": {
         "*.mq4": "cpp",
         "*.mqh": "cpp",
-        "*.mql4": "cpp"
+        "*.mql4": "cpp",
+        "type_traits": "cpp",
+        "limits": "cpp"
     },
+    //以下のパスをインストールしたMT4に合わせて修正する
+    "compilemql4.metaeditorDir": "C:\\Program Files (x86)\\MetaTrader 4\\metaeditor.exe",
+    "C_Cpp.default.forcedInclude": [
+        "c:\\Users\\username\\.vscode\\extensions\\l-i-v.mql-tools-2.0.2\\data\\mql4_en.mqh"
+    ],
 }
